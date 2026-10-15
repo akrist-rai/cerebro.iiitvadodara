@@ -22,6 +22,10 @@
   } = $props();
 
   const img = $derived(lookup(id));
+  // A url() inside a custom property resolves against the stylesheet that
+  // reads it (dist/assets/*.css), not the page, so `./art/x.webp` would 404
+  // as `/assets/art/x.webp`. Make it absolute against the document.
+  const cssSrc = $derived(new URL(img.src, document.baseURI).href);
 </script>
 
 <span
@@ -31,7 +35,7 @@
   class:cut
   class:contain={fit === 'contain'}
   style:--bg={img.c}
-  style:--src="url({img.src})"
+  style:--src="url({cssSrc})"
   style:--pos={pos}
   style:--ratio={ratio || `${img.w} / ${img.h}`}
   style:--dots={dots}

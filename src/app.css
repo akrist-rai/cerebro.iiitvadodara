@@ -1,0 +1,613 @@
+/* CEREBRO ’26 — printed in ASCII.
+   Thermal-paper receipts, postage stamps and two-colour riso ink, set in
+   monospace. Everything that looks like type art is real characters. */
+:root {
+  --paper: #f1ecdf;
+  --paper-hi: #fbf8ef;
+  --paper-2: #e6dfc9;
+  --ink: #14130f;
+  --ink-2: #26241c;
+  --dim: #5d584a;
+  --hair: #b8af96;
+  --red: #e5391f;
+  --blue: #2535ff;
+  --lime: #d6f23a;
+  --mono:
+    'JetBrains Mono Variable', ui-monospace, 'Cascadia Mono', 'SF Mono',
+    Consolas, 'Liberation Mono', monospace;
+  --pixel: 'Silkscreen', var(--mono);
+  --gutter: clamp(16px, 3.6vw, 56px);
+  --bar: 46px;
+  --shadow: 5px 5px 0 var(--ink);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--paper);
+  font-variant-ligatures: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--bar) + 20px);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+button,
+input,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+}
+button,
+a,
+input,
+select,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  touch-action: manipulation;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+a {
+  color: inherit;
+}
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+::selection {
+  background: var(--ink);
+  color: var(--lime);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+p {
+  max-width: 68ch;
+}
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+svg {
+  flex-shrink: 0;
+}
+dialog {
+  color: var(--ink);
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.page-shell {
+  max-width: 1760px;
+  margin: auto;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ── ASCII art blocks ────────────────────────────────────────────── */
+.art {
+  font-family: var(--mono);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: pre;
+  margin: 0;
+  user-select: none;
+  font-variant-ligatures: none;
+  overflow: hidden;
+}
+.art .f,
+.art .s {
+  display: inline-block;
+  height: 1.2em;
+  vertical-align: top;
+  font-style: normal;
+}
+.art .f {
+  background: currentColor;
+}
+/* the drop shadow is a dither, so it reads as ink and not as a second letter */
+.art .s {
+  background: conic-gradient(
+      var(--shade, var(--blue)) 25%,
+      transparent 0 50%,
+      var(--shade, var(--blue)) 0 75%,
+      transparent 0
+    )
+    0 0 / 0.3em 0.3em;
+}
+
+/* ── layout ─────────────────────────────────────────────────────── */
+.sec {
+  padding: clamp(64px, 8vw, 116px) var(--gutter);
+  position: relative;
+}
+.sec--ink {
+  --shade: var(--red);
+  background: var(--ink);
+  color: var(--paper);
+  --dim: #aaa493;
+  --hair: #4a463a;
+}
+.sec--blue {
+  --shade: var(--lime);
+  background: var(--blue);
+  color: var(--paper-hi);
+  --dim: #c9ceff;
+  --hair: #6c78ff;
+}
+.sec--lime {
+  --shade: var(--blue);
+  background: var(--lime);
+  color: var(--ink);
+  --dim: #3c4310;
+  --hair: #a9bf1e;
+}
+.sec--paper2 {
+  background: var(--paper-2);
+}
+
+/* section header: § rule, then the title as block letters */
+.shead {
+  margin-bottom: clamp(28px, 4vw, 52px);
+}
+.shead-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--pixel);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.shead-rule::after {
+  content: '';
+  flex: 1;
+  border-top: 2px solid var(--hair);
+}
+.shead-blurb {
+  max-width: 62ch;
+  color: var(--dim);
+  margin: 0;
+}
+
+.eyebrow {
+  font-family: var(--pixel);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* ── buttons: hard-shadow, bracketed ────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 2px solid var(--ink);
+  background: var(--paper-hi);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition:
+    transform 0.15s var(--ease),
+    box-shadow 0.15s var(--ease),
+    background 0.15s;
+}
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+  background: var(--lime);
+}
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.btn.red {
+  background: var(--red);
+  color: var(--paper-hi);
+}
+.btn.red:hover {
+  background: var(--ink);
+  color: var(--lime);
+}
+.btn.ink {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 4px 4px 0 var(--red);
+}
+.btn.ink:hover {
+  background: var(--lime);
+  color: var(--ink);
+}
+.btn.ghost {
+  background: transparent;
+  box-shadow: none;
+}
+.btn.ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: none;
+  box-shadow: none;
+}
+.btn.small {
+  min-height: 36px;
+  padding: 6px 10px;
+  font-size: 11px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.sec--ink .btn,
+.sec--blue .btn {
+  border-color: var(--paper);
+  box-shadow: 4px 4px 0 var(--paper);
+}
+.sec--ink .btn:hover,
+.sec--blue .btn:hover {
+  box-shadow: 6px 6px 0 var(--paper);
+}
+.sec--ink .btn.ink {
+  background: var(--paper);
+  color: var(--ink);
+}
+.btn svg {
+  transition: transform 0.2s var(--ease);
+}
+.btn:hover svg {
+  transform: translate(2px, -2px);
+}
+.link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+.link:hover {
+  background: var(--lime);
+  color: var(--ink);
+}
+.icon-button {
+  width: 40px;
+  height: 40px;
+  display: inline-grid;
+  place-items: center;
+  border: 2px solid currentColor;
+  background: transparent;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.icon-button:hover {
+  background: var(--ink);
+  color: var(--lime);
+}
+
+/* ── inline marks ───────────────────────────────────────────────── */
+b {
+  font-weight: 700;
+  background: linear-gradient(
+    transparent 55%,
+    color-mix(in srgb, var(--lime) 85%, transparent) 55%
+  );
+  padding: 0 0.1em;
+}
+.sec--lime b {
+  background: linear-gradient(transparent 55%, #fff8 55%);
+}
+.sec--ink b {
+  background: none;
+  color: var(--lime);
+}
+
+/* chips + pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid currentColor;
+  padding: 3px 9px;
+  font-family: var(--pixel);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+.pill.open {
+  color: #0b5a2a;
+  background: #cdf3d6;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  background: currentColor;
+  display: inline-block;
+}
+.blink {
+  animation: blink 1.1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.empty {
+  padding: 48px 20px;
+  text-align: center;
+  border: 2px dashed currentColor;
+  margin-top: 28px;
+}
+.empty h3 {
+  font-size: clamp(20px, 3vw, 30px);
+  margin: 0 0 8px;
+}
+.empty p {
+  margin: 0 auto 18px;
+  color: var(--dim);
+}
+
+/* terminal window chrome, used by about / dialogs */
+.win {
+  border: 2px solid currentColor;
+  background: var(--paper-hi);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.win-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--pixel);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.win-bar i {
+  font-style: normal;
+  color: var(--lime);
+}
+.win-bar span:last-child {
+  margin-left: auto;
+}
+
+/* reveal on scroll */
+.will-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.7s var(--ease);
+}
+.will-reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* cursor trail glyphs */
+.trail {
+  position: fixed;
+  z-index: 90;
+  pointer-events: none;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--red);
+  mix-blend-mode: multiply;
+  animation: trail 0.9s ease-out forwards;
+}
+@keyframes trail {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% - 26px)) scale(0.7);
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --bar: 52px;
+  }
+  .trail {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .will-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .trail {
+    display: none;
+  }
+}
+
+/* a barcode drawn in CSS, so it never depends on glyph coverage */
+.bc {
+  display: flex;
+  align-items: stretch;
+  height: 22px;
+  overflow: hidden;
+}
+.bc i {
+  background: currentColor;
+  flex: none;
+}
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.05em;
+  background: currentColor;
+  vertical-align: -0.15em;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+/* ── the press: grain, print-in, plate tints ────────────────────── */
+/* fibre noise over the whole sheet; fixed + no blend mode, so it is cheap */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.1 -.35'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+}
+.will-print {
+  clip-path: inset(0 0 100% 0);
+}
+.will-print.printed {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1.15s steps(18, end);
+}
+@media (prefers-reduced-motion: reduce) {
+  .will-print {
+    clip-path: none;
+  }
+  body::after {
+    opacity: 0.06;
+  }
+}
+/* a registered cross, used as a corner mark on prints */
+.reg {
+  --reg: 14px;
+  position: relative;
+}
+.reg::before,
+.reg::after {
+  content: '';
+  position: absolute;
+  width: var(--reg);
+  height: var(--reg);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background:
+    linear-gradient(currentColor, currentColor) 50% 0 / 2px 100% no-repeat,
+    linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat;
+  pointer-events: none;
+}
+.reg::before {
+  top: -8px;
+  left: -8px;
+}
+.reg::after {
+  right: -8px;
+  bottom: -8px;
+}
+
+/* header collages: stickers and taped prints in the title's empty half */
+.collage {
+  position: relative;
+  height: 100%;
+  min-height: 190px;
+}
+.collage > * {
+  position: absolute;
+  display: block;
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.4s var(--ease);
+}
+.collage > *:hover {
+  transform: rotate(0deg) scale(1.06);
+  z-index: 5;
+}
+.taped {
+  background: var(--paper-hi);
+  border: 2px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  padding: 6px 6px 22px;
+}
+.taped::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 62px;
+  height: 20px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: color-mix(in srgb, var(--lime) 82%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
+}
+
+/* each coloured band is punched along its top edge, like a tear-off ticket */
+.sec--ink::before,
+.sec--blue::before,
+.sec--lime::before,
+.sec--paper2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9px;
+  height: 10px;
+  background: inherit;
+  -webkit-mask: radial-gradient(circle at 50% 0, #0000 4.5px, #000 5px) 0 0 /
+    14px 10px repeat-x;
+  mask: radial-gradient(circle at 50% 0, #0000 4.5px, #000 5px) 0 0 / 14px 10px
+    repeat-x;
+  pointer-events: none;
+}

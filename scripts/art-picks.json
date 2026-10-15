@@ -1,0 +1,673 @@
+[
+  {
+    "id": "n3",
+    "set": "new images",
+    "file": "072c492c0dda04b28a4d82554e642ed8.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n8",
+    "set": "new images",
+    "file": "1404a25c16207c25108e35e96124737d.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n13",
+    "set": "new images",
+    "file": "1ea43d005a456067efbd33ce10c558d9.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n23",
+    "set": "new images",
+    "file": "3f5da6483a133e93adb00f67f73612dc.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n24",
+    "set": "new images",
+    "file": "443223c8851b746121d747728f325793.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n31",
+    "set": "new images",
+    "file": "5d5305891a0fb5519ee1f44ec5c37e49.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n32",
+    "set": "new images",
+    "file": "5edee871ac49b70935d0c22b28ec3c60.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n36",
+    "set": "new images",
+    "file": "67be96394e440929176c1366c4965896.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n37",
+    "set": "new images",
+    "file": "6d8f9b3ee8a5d9c19c6c31816d95bd1e.jpg",
+    "kind": "stamp",
+    "keepBackdrop": true
+  },
+  {
+    "id": "n42",
+    "set": "new images",
+    "file": "8db55e4434b1f9947a89dda0cf54c640.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n51",
+    "set": "new images",
+    "file": "aa23f7c4c680cf585a35750c313a2a6e.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n52",
+    "set": "new images",
+    "file": "af53785dc12e101b63fa5344d7ad176b.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n57",
+    "set": "new images",
+    "file": "bfa30ffef09d52a3e99fa1fd2595e9da.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n68",
+    "set": "new images",
+    "file": "ddc177e427b6e344ce2f5d06f321ed8a.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n75",
+    "set": "new images",
+    "file": "fcb149ff16df48862b5e11095064691b.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n76",
+    "set": "new images",
+    "file": "fce06af5f6bfe91de235160d164d77ac.jpg",
+    "kind": "stamp"
+  },
+  {
+    "id": "n0",
+    "set": "new images",
+    "file": "00c77d8177360a030d95ff413874399f.jpg",
+    "kind": "receipt"
+  },
+  {
+    "id": "n35",
+    "set": "new images",
+    "file": "66798e562944bd84208731be92611d6b.jpg",
+    "kind": "receipt"
+  },
+  {
+    "id": "n44",
+    "set": "new images",
+    "file": "911ea4352faff0b894842b9a4cf03e1e.jpg",
+    "kind": "receipt"
+  },
+  {
+    "id": "n2",
+    "set": "new images",
+    "file": "04f096f42b707451b81bcbb9d471c203.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n5",
+    "set": "new images",
+    "file": "0ba66949c38f3be783c0ee77deeea3b2.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n10",
+    "set": "new images",
+    "file": "1667b655e218580c8f0d897dfd6d1909.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n14",
+    "set": "new images",
+    "file": "1f97caf3920c032cbe5e59249866d43e.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n34",
+    "set": "new images",
+    "file": "66023dba9808c9164c1df63b2ae21c71.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n49",
+    "set": "new images",
+    "file": "a962a778684f6173c7af9e93fb0024b7.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n53",
+    "set": "new images",
+    "file": "b1b41d16af7ae6d49db8b754c5b345c1.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n55",
+    "set": "new images",
+    "file": "b7068d98f0cb719c29e7b6380db7f590.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n56",
+    "set": "new images",
+    "file": "b91c4455002868ebbbfbdcd31099e61f.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n63",
+    "set": "new images",
+    "file": "cca8cfc431ddbf7084e0c082698129bf.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n69",
+    "set": "new images",
+    "file": "e279bfb94826fce0d8a378196dd764e3.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n1",
+    "set": "new images",
+    "file": "01f2133e470d53da7865a7018a4c775e.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n6",
+    "set": "new images",
+    "file": "0cec72127b544fc147bd26b51729b5b3.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n9",
+    "set": "new images",
+    "file": "142cbb80155097749f23b006db1c7267.jpg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "n11",
+    "set": "new images",
+    "file": "1741782617cae5931bb1ad87c57b575d.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n12",
+    "set": "new images",
+    "file": "1b1733219ee3c7174198fb7f5c02a12b.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n19",
+    "set": "new images",
+    "file": "333e6f18031af3ed918cf314bf3cfc22.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n20",
+    "set": "new images",
+    "file": "338bac1a48a8f20af279c6da0abb0d71.jpg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "n21",
+    "set": "new images",
+    "file": "34836cc628dc951dbd61cbb75f155355.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n22",
+    "set": "new images",
+    "file": "391b2204956d09c39fadf6db638646d9.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n25",
+    "set": "new images",
+    "file": "44a69314ca219cbe550e6f282a05f836.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n26",
+    "set": "new images",
+    "file": "4985a9706fc42755c74a430149f4c3e2.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n27",
+    "set": "new images",
+    "file": "531472ed897a6449eed734e8044bb15a.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n28",
+    "set": "new images",
+    "file": "57d859b0a9cd324e720b707dac9b98fa.jpg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "n29",
+    "set": "new images",
+    "file": "5b7d05fd997a52f6b954432082a38d52.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n30",
+    "set": "new images",
+    "file": "5c1798ade0cc20511834734b6b01ac3a.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n38",
+    "set": "new images",
+    "file": "6ffab3c265d4f66fb9b58edcd6158c1f.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n39",
+    "set": "new images",
+    "file": "71c363410e481c856ce2011f370accfa.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n40",
+    "set": "new images",
+    "file": "7fe86bb64061d0aae42ccc990f02fef0.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n41",
+    "set": "new images",
+    "file": "81be2aeaf8155ebfdfc2618830212fb1.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n43",
+    "set": "new images",
+    "file": "91134c1cc81060427d4292f10f1a11d2.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n45",
+    "set": "new images",
+    "file": "96a6cb2b522a798b8a475acb94931252.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n46",
+    "set": "new images",
+    "file": "9a456ffef231a7e74aa24f540e6fae95.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n47",
+    "set": "new images",
+    "file": "9ad12b40355df12cedd8ae8d84820a09.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n54",
+    "set": "new images",
+    "file": "b6578f170d0b04e309eb2f4761a3cc72.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n59",
+    "set": "new images",
+    "file": "c31f2b5c4e68dd05ca2585acf2bc4eea.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n60",
+    "set": "new images",
+    "file": "c580cc0fc0b7b4734ef61f4634775523.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n64",
+    "set": "new images",
+    "file": "cde9fd26b0976bf57bdf55b24a19807b.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n65",
+    "set": "new images",
+    "file": "d098c035e9c52d3079dbb458345ff7b1.jpg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "n66",
+    "set": "new images",
+    "file": "d36bc852f125200b357df801fd34bd72.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n67",
+    "set": "new images",
+    "file": "dca5d21ee27f054c14c55e880b552b82.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n71",
+    "set": "new images",
+    "file": "ec1f21fe9d4da3886596be61b068627b.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n73",
+    "set": "new images",
+    "file": "f57352a01298c3c482c3ee8fc94f87e4.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "n74",
+    "set": "new images",
+    "file": "f8b635b9637caafca6f07c01db1f94d3.jpg",
+    "kind": "poster"
+  },
+  {
+    "id": "g236",
+    "set": "good stuff",
+    "file": "fashionstation 230226x778.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g1",
+    "set": "good stuff",
+    "file": "1997_ The start of an adventure ☠️🏝.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g8",
+    "set": "good stuff",
+    "file": "Anime Posters Online - Shop Unique Metal Prints, Pictures, Paintings _ Displate.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g15",
+    "set": "good stuff",
+    "file": "Choujin X Vol_ 12.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g23",
+    "set": "good stuff",
+    "file": "Denj - Chainsaw Man_.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g26",
+    "set": "good stuff",
+    "file": "Goodbye Merry _ @IfihasR5 • tw __).jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g28",
+    "set": "good stuff",
+    "file": "Guts.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g33",
+    "set": "good stuff",
+    "file": "Inumaki.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g34",
+    "set": "good stuff",
+    "file": "I’LL TAKE CARE OF YOU _ TYLER THE CREATOR _ DON’T TAP THE GLASS _ FLOWER BOY.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g36",
+    "set": "good stuff",
+    "file": "Killua.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g45",
+    "set": "good stuff",
+    "file": "Mob psycho 100(1).jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g53",
+    "set": "good stuff",
+    "file": "Portada del primer número de One punch man_ Es veu al seu protagonista.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g54",
+    "set": "good stuff",
+    "file": "Post by @plankos · 1 image.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g60",
+    "set": "good stuff",
+    "file": "Rei_) (not my art).jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g63",
+    "set": "good stuff",
+    "file": "Rym 🏴_☠️ (@miu_wallp) on X.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g68",
+    "set": "good stuff",
+    "file": "Slam Dunk Manga New Edition Cover Art – All 20 Covers.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g70",
+    "set": "good stuff",
+    "file": "Sukuna”.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g72",
+    "set": "good stuff",
+    "file": "The Weeknd x Chainsaw Man.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g73",
+    "set": "good stuff",
+    "file": "Thorfinn _ Vinland saga.jpeg",
+    "kind": "poster"
+  },
+  { "id": "g90", "set": "good stuff", "file": "_ (79).jpeg", "kind": "poster" },
+  { "id": "g96", "set": "good stuff", "file": "_ (85).jpeg", "kind": "poster" },
+  { "id": "g97", "set": "good stuff", "file": "_ (86).jpeg", "kind": "poster" },
+  { "id": "g98", "set": "good stuff", "file": "_ (87).jpeg", "kind": "poster" },
+  { "id": "g99", "set": "good stuff", "file": "_ (88).jpeg", "kind": "poster" },
+  {
+    "id": "g100",
+    "set": "good stuff",
+    "file": "_ (89).jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g101",
+    "set": "good stuff",
+    "file": "_ (90).jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g103",
+    "set": "good stuff",
+    "file": "_ (92).jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g116",
+    "set": "good stuff",
+    "file": "_ - 2026-05-28T234849.394.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g121",
+    "set": "good stuff",
+    "file": "_ - 2026-05-28T234939.640.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g141",
+    "set": "good stuff",
+    "file": "_ - 2026-05-30T130808.357.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g146",
+    "set": "good stuff",
+    "file": "_ - 2026-05-30T131505.407.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g151",
+    "set": "good stuff",
+    "file": "_ - 2026-05-30T131759.220.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g190",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132255.092.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g191",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132329.820.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g192",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132335.835.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g193",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132342.326.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g194",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132359.945.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g195",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132653.514.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g197",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132705.495.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g199",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132805.967.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g202",
+    "set": "good stuff",
+    "file": "_ - 2026-05-31T132826.765.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g228",
+    "set": "good stuff",
+    "file": "_𝐈𝐜𝐨𝐧𝐬.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g229",
+    "set": "good stuff",
+    "file": "aki hayakawa.jpeg",
+    "kind": "poster"
+  },
+  { "id": "g233", "set": "good stuff", "file": "csm.jpeg", "kind": "poster" },
+  {
+    "id": "g235",
+    "set": "good stuff",
+    "file": "denji starboy album cover.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g238",
+    "set": "good stuff",
+    "file": "https___x_com_7a99o__status_1952800016587968865.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g242",
+    "set": "good stuff",
+    "file": "litterally chainsaw man.jpeg",
+    "kind": "poster"
+  },
+  {
+    "id": "g243",
+    "set": "good stuff",
+    "file": "mob psycho 100.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g244",
+    "set": "good stuff",
+    "file": "move! move! just like mob!💥.jpeg",
+    "kind": "poster",
+    "big": true
+  },
+  {
+    "id": "g262",
+    "set": "good stuff",
+    "file": "🥀.jpeg",
+    "kind": "poster",
+    "big": true
+  }
+]

@@ -25,10 +25,6 @@ for (const [id, event] of Object.entries(EVENT_DETAILS)) {
     'invalid mode.',
   );
   check(
-    event.fee === null || (Number.isFinite(event.fee) && event.fee >= 0),
-    'fee must be null or nonnegative INR.',
-  );
-  check(
     ['upcoming', 'open', 'closed', 'full'].includes(event.registration.status),
     'invalid registration status.',
   );
@@ -65,16 +61,6 @@ for (const [id, event] of Object.entries(EVENT_DETAILS)) {
       group.title && Array.isArray(group.items) && group.items.length,
       'each detail group needs a title and items.',
     );
-  for (const prize of event.prizes ?? [])
-    check(
-      prize.title && Number.isFinite(prize.amount) && prize.amount > 0,
-      'invalid prize row.',
-    );
-  check(
-    !event.prizeTotal ||
-      event.prizes.reduce((n, p) => n + p.amount, 0) === event.prizeTotal,
-    'prize rows must sum to the stated total.',
-  );
   for (const person of event.organizers) {
     check(
       typeof person.name === 'string' && person.name.trim(),

@@ -8,7 +8,6 @@
   import Events from './lib/Events.svelte';
   import Schedule from './lib/Schedule.svelte';
   
-  import Crew from './lib/Crew.svelte';
   
   import Footer from './lib/Footer.svelte';
   import EventDialog from './lib/EventDialog.svelte';
@@ -168,7 +167,6 @@
       bind:savedOnly={planOnly}
     />
    
-    <Crew />
    
   </main>
   <Footer onregister={openRegistration} />

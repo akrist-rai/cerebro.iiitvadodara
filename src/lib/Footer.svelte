@@ -27,9 +27,9 @@
   <div class="foot">
     <span>© 2026 Cerebro · Technical Committee, IIIT Vadodara</span>
     <nav aria-label="Footer">
-      <a href="#events">Events</a><a href="#schedule">Schedule</a><a
-        href="#contact">Crew</a
-      ><a href="#top">Top ↑</a>
+      <a href="#events">Events</a><a href="#schedule">Schedule</a><a href="#top"
+        >Top ↑</a
+      >
     </nav>
   </div>
  

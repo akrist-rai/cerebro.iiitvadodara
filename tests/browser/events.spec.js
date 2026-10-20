@@ -64,8 +64,6 @@ test('direct event links show all operational fields and do not claim a registra
   for (const text of [
     'Allotted room',
     'Organizing club:',
-    'Entry fee',
-    'Prizes',
     'Team size',
     'Eligibility',
     'The people behind it',
@@ -141,7 +139,6 @@ test('official registration links and calendar downloads activate with confirmed
     ...fixture.equinox,
     startsAt: start,
     endsAt: new Date(Date.parse(start) + 7200000).toISOString(),
-    fee: 0,
     room: 'Test Room',
     club: 'Test Club',
     registration: {
@@ -188,7 +185,6 @@ test('layout stays within the viewport and mobile navigation works', async ({
     '#events',
     '#schedule',
     '#partners',
-    '#contact',
   ]) {
     await page.locator(section).scrollIntoViewIfNeeded();
     expect(

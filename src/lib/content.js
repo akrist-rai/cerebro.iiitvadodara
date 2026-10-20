@@ -12,7 +12,6 @@ export const SECTIONS = [
   { id: 'events', key: '3', label: 'Events' },
   { id: 'schedule', key: '4', label: 'Schedule' },
   { id: 'partners', key: '5', label: 'Partners' },
-  { id: 'contact', key: '6', label: 'Crew' },
 ];
 
 export const ABOUT =
@@ -342,44 +341,6 @@ export const TIERS = [
   },
 ];
 
-// The organising crew, from the proposal's leads and core-committee lists.
-export const CREW = {
-  intro:
-    'For any inquiries, please feel free to contact us. We look forward to hearing from you.',
-  leads: [
-    { name: 'Pratham K. Vaghela', role: 'Convenor' },
-    { name: 'Tirth Doshi', role: 'Co-convenor' },
-    { name: 'Aryan Purbhe', role: 'Sponsorship lead' },
-    { name: 'Ankit Rai', role: 'Development lead' },
-    { name: 'Kashvi Khandelwal', role: 'PR & social lead' },
-    { name: 'Damini Khushwaha', role: 'Design lead' },
-    { name: 'Shikhar Singh', role: 'Logistics lead' },
-    { name: 'Yash Bhosle', role: 'Logistics co-lead' },
-    { name: 'Priyanshi Verma', role: 'Decor lead' },
-  ],
-  core: [
-    'Ayush Anil',
-    'Soham Agarwal',
-    'Adeen J Nair',
-    'Aghnivesh',
-    'Jamil',
-    'Priyanshu',
-    'Divyam',
-    'Ojas',
-    'Suraj',
-    'Aashu Raj',
-    'Rohit Ranwa',
-    'Prashant Sharma',
-    'Himanshi',
-    'Sai Praneeth',
-    'Bhoomi Jaiswal',
-    'Ayushi Singh',
-    'Saanvi Bajaj',
-    'Riyaziya Bano',
-    'Shashwat Singh',
-  ],
-};
-
 export const FAQ = [
   {
     q: 'How do I register for an event?',
@@ -400,10 +361,6 @@ export const FAQ = [
   {
     q: 'Are the times final?',
     a: 'The published timetable is the master schedule. The four gaming leagues are still waiting on their match slots, and rooms can change. Anything unconfirmed is marked as such. All times are IST.',
-  },
-  {
-    q: 'What do the prizes look like?',
-    a: 'Every event lists its prize breakdown in the briefing, including special prizes for IIIT Vadodara first-years where they apply. Prizes are to be generated from sponsorships.',
   },
 ];
 

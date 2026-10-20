@@ -90,7 +90,6 @@ export function clock(value) {
     hourCycle: 'h23',
   }).format(new Date(value));
 }
-export const rupees = (n) => '₹' + n.toLocaleString('en-IN');
 export function registrationState(event, now = Date.now()) {
   const registration = event.registration || {};
   if (

@@ -15,7 +15,6 @@
     ['events', 'Events'],
     ['schedule', 'Schedule'],
     ['partners', 'Partners'],
-    ['contact', 'Crew'],
   ];
   function close() {
     menu.close();

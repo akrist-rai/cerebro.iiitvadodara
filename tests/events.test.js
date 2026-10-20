@@ -216,14 +216,6 @@ describe('proposal data', () => {
       assert.ok(at <= Date.parse('2026-11-01T23:59:00+05:30'), event.id);
     }
   });
-  it('keeps each prize total equal to the sum it claims', () => {
-    for (const event of catalog.filter((e) => e.prizeTotal))
-      assert.equal(
-        event.prizes.reduce((n, p) => n + p.amount, 0),
-        event.prizeTotal,
-        event.id,
-      );
-  });
   it('puts every event on at least one schedule receipt', () => {
     for (const event of catalog) assert.ok(event.slots.length > 0, event.id);
   });

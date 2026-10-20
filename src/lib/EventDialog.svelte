@@ -3,7 +3,6 @@
   import Icon from './Icon.svelte';
   import Marked from './Marked.svelte';
   import AsciiScene from './AsciiScene.svelte';
-  import Barcode from './Barcode.svelte';
   import Art from './Art.svelte';
   import { eventArt } from './art.js';
   import {
@@ -15,7 +14,6 @@
     pendingText,
     safeUrl,
     validDate,
-    rupees,
     calendarContent,
     downloadCalendar,
   } from './events.js';
@@ -38,15 +36,6 @@
   let copyStatus = $state('');
   let now = $state(Date.now());
   const state = $derived(event ? registrationState(event, now) : null);
-  const prizeLine = $derived(
-    !event
-      ? null
-      : event.prizeTotal
-        ? `${rupees(event.prizeTotal)} in prizes`
-        : event.prizes?.length
-          ? `Winner ${rupees(event.prizes[0].amount)} + more`
-          : null,
-  );
 
   $effect(() => {
     if (!event && !hub) return;
@@ -326,50 +315,12 @@
               <dt>Format</dt>
               <dd>{pendingText(event.mode)}</dd>
             </div>
-            <div>
-              <dt><Icon name="trophy" size={15} /> Prizes</dt>
-              <dd>{pendingText(prizeLine)}</dd>
-            </div>
-            <div>
-              <dt>Entry fee</dt>
-              <dd>
-                {event.fee === 0
-                  ? 'Free entry'
-                  : event.fee === null
-                    ? 'To be announced'
-                    : '₹' + event.fee.toLocaleString('en-IN')}
-              </dd>
-            </div>
           </dl>
           <p class="small muted">
             All event times are shown in India Standard Time (IST).
           </p>
         </div>
 
-        {#if event.prizes.length}
-          <div class="receipt">
-            <p class="eyebrow">Prize breakdown</p>
-            <ul>
-              {#each event.prizes as p}
-                <li>
-                  <span>{p.title}</span><span class="dots" aria-hidden="true"
-                  ></span><b>{rupees(p.amount)}{p.extra ? ' ' + p.extra : ''}</b
-                  >
-                </li>
-              {/each}
-            </ul>
-            {#if event.prizeTotal}
-              <p class="total">
-                <span>TOTAL</span><span class="dots" aria-hidden="true"
-                ></span><b>{rupees(event.prizeTotal)}</b>
-              </p>
-            {/if}
-            <p class="small muted">
-              Prizes are to be generated from sponsorships.
-            </p>
-            <div class="code"><Barcode seed={event.id} bars={20} /></div>
-          </div>
-        {/if}
       </aside>
     </div>
 
@@ -712,39 +663,6 @@
   .practical dl > div {
     grid-template-columns: 1fr;
     gap: 2px;
-  }
-  .receipt {
-    background: var(--lime);
-    border: 2px dashed var(--ink);
-    padding: 16px 18px;
-  }
-  .receipt .eyebrow {
-    margin: 0 0 8px;
-  }
-  .receipt li,
-  .receipt .total {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    padding: 4px 0;
-    font-size: 13px;
-    margin: 0;
-    max-width: none;
-  }
-  .receipt .total {
-    border-top: 2px solid var(--ink);
-    margin-top: 6px;
-    padding-top: 8px;
-    font-weight: 800;
-  }
-  .dots {
-    flex: 1;
-    border-bottom: 2px dotted var(--ink);
-    transform: translateY(-3px);
-    min-width: 8px;
-  }
-  .receipt .code {
-    margin-top: 12px;
   }
   .registration {
     background: var(--paper-2);

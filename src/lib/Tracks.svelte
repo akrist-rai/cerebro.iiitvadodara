@@ -5,7 +5,7 @@
   import Art from './Art.svelte';
   import { trackArt } from './art.js';
   import { TRACKS, TRACK_BLURB } from './content.js';
-  import { directory, rupees } from './events.js';
+  import { directory } from './events.js';
   import { reveal } from './interaction.js';
 
   let { onopen } = $props();
@@ -16,7 +16,6 @@
     events: directory.filter((e) => e.track === name),
     plate: trackArt(name),
   }));
-  const top = (e) => e.prizes?.[0]?.amount;
 </script>
 
 <section id="tracks" class="sec sec--ink" aria-labelledby="tracks-title">
@@ -84,9 +83,7 @@
                     <button onclick={() => onopen(e.id)}>
                       <span class="en">{e.name}</span>
                       <span class="dots" aria-hidden="true"></span>
-                      <span class="ed"
-                        >{top(e) ? 'top ' + rupees(top(e)) : e.mode}</span
-                      >
+                      <span class="ed">{e.mode}</span>
                     </button>
                   </li>
                 {/each}

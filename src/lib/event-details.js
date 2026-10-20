@@ -17,10 +17,6 @@ const pending = () => ({
   room: null,
   club: null,
   organizers: [],
-  prize: null,
-  prizes: [],
-  prizeTotal: null,
-  fee: null,
   eligibility: null,
   capacity: null,
   objective: null,
@@ -161,13 +157,6 @@ export const EVENT_DETAILS = {
       },
     ],
     notes: ['Needs a separate classroom for the event to run smoothly.'],
-    prizes: [
-      { title: 'Winner', amount: 3000 },
-      { title: 'Runner-up', amount: 2000 },
-      { title: '1st-year prize', amount: 1500 },
-      { title: 'All-girls team', amount: 1000 },
-    ],
-    prizeTotal: 7500,
     organizers: enigma,
   },
 
@@ -195,12 +184,6 @@ export const EVENT_DETAILS = {
       'All slips must be submitted for evaluation.',
     ],
     notes: ['Needs a separate area to run the trading ring.'],
-    prizes: [
-      { title: 'Winner', amount: 3000 },
-      { title: 'Runner-up', amount: 2000 },
-      { title: '2nd runner-up', amount: 1500 },
-    ],
-    prizeTotal: 6500,
     organizers: [
       person('Ayush Vora', 'Convenor', null, '9106615489'),
       person('Arshit Dawra', 'Co-convenor', '20251502005', '9468817332'),
@@ -242,12 +225,6 @@ export const EVENT_DETAILS = {
       'Rankings are based on the final leaderboard standing.',
       'Misconduct or rule violations lead to disqualification.',
       'Organizers may verify participant identity; their decisions are final.',
-    ],
-    prizes: [
-      { title: 'Winner', amount: 3500 },
-      { title: 'Runner-up', amount: 2500 },
-      { title: '2nd runner-up', amount: 1500 },
-      { title: 'IIITV first-year special', amount: 1000 },
     ],
     organizers: [
       person('Sujal Shah', 'Convenor', '202452330', '9904241049'),
@@ -298,12 +275,6 @@ export const EVENT_DETAILS = {
       'The decision of the judges and organizing committee is final and binding.',
     ],
     notes: ['Mentorship sessions will be conducted before the event.'],
-    prizes: [
-      { title: 'Winner', amount: 4000 },
-      { title: '1st runner-up', amount: 2500 },
-      { title: '2nd runner-up', amount: 1500 },
-    ],
-    prizeTotal: 8000,
     organizers: [
       person('Aditya Vikram', 'Convenor', '20251501190', '8210110012'),
       person('Ojas Naringe', 'Co-convenor', '20251503034', '9405819180'),
@@ -341,13 +312,6 @@ export const EVENT_DETAILS = {
       'Internet and access to any AI is permissible.',
     ],
     notes: ['Needs access to the entire campus to hide and find the hints.'],
-    prizes: [
-      { title: 'Winner', amount: 5000, extra: '+ e-goodie' },
-      { title: '1st runner-up', amount: 3000, extra: '+ e-goodie' },
-      { title: '2nd runner-up', amount: 2000, extra: '+ e-goodie' },
-      { title: 'IIITV first-year special', amount: 2000 },
-    ],
-    prizeTotal: 12000,
     organizers: [
       person('Ankit Rai', 'Convenor', '20251504008', '8302638070'),
       person('Soham Agarwal', 'Co-convenor', '202452332', '9650036655'),
@@ -409,12 +373,6 @@ export const EVENT_DETAILS = {
       'Teams submit a technical sheet describing the components and mechanisms used.',
       'Mentorship sessions will be conducted before the event.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 4000 },
-      { title: '1st runner-up', amount: 2500 },
-      { title: '2nd runner-up', amount: 1500 },
-    ],
-    prizeTotal: 8000,
     organizers: [
       person('Ojas Naringe', 'Convenor', '20251503034', '9405819180'),
       person('Aditya Vikram', 'Co-convenor', '20251501190', '8210110012'),
@@ -465,12 +423,6 @@ export const EVENT_DETAILS = {
       'Plagiarism or any attempt to cheat leads to immediate disqualification.',
       'In case of any discrepancy the organizers’ decision is final.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 3000 },
-      { title: '1st runner-up', amount: 2000 },
-      { title: 'IIITV first-year special', amount: 1000 },
-    ],
-    prizeTotal: 6000,
     organizers: [
       person('Darshan Patel', 'Convenor', null, '9427117467'),
       person('Aryan Mehta', 'Co-convenor', '20251501108', '7495841168'),
@@ -503,16 +455,9 @@ export const EVENT_DETAILS = {
     ],
     rules: [
       'Any plagiarism leads to immediate disqualification.',
-      'A team must contain 3 members to be eligible for prizes.',
+      'A team must contain 3 members.',
       'Team members should be from the same institute.',
-      'All members must be first-years to be eligible for the IIITV first-year prize.',
       'In case of discrepancy, the organizers’ decision is final.',
-    ],
-    prizes: [
-      { title: 'Winner', amount: 3000 },
-      { title: '1st runner-up', amount: 2250 },
-      { title: '2nd runner-up', amount: 1800 },
-      { title: 'IIITV first-year special', amount: 1500 },
     ],
     organizers: [
       person('Arpit Maheshwari', 'Convenor', '202451022', '9024236239'),
@@ -563,13 +508,6 @@ export const EVENT_DETAILS = {
     notes: [
       'Registration details with deadlines will be shared closer to the event date.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 4000 },
-      { title: '1st runner-up', amount: 2000 },
-      { title: '2nd runner-up', amount: 1000 },
-      { title: 'IIITV first-year special', amount: 1000 },
-    ],
-    prizeTotal: 8000,
     organizers: [...dot, ...coding],
   },
 
@@ -601,13 +539,6 @@ export const EVENT_DETAILS = {
       'Rounds are played on the Matiks platform; points accumulate across rounds.',
       'Needs a separate classroom for the event.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 3000 },
-      { title: 'Runner-up', amount: 2000 },
-      { title: '1st-year prize', amount: 1500 },
-      { title: 'All-girls team', amount: 1000 },
-    ],
-    prizeTotal: 7500,
     organizers: enigma,
   },
 
@@ -647,13 +578,6 @@ export const EVENT_DETAILS = {
       'Bring your own laptop, tablet or phone for your preferred medium.',
       'Registration details with deadlines will be shared closer to the event date.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 3500 },
-      { title: '1st runner-up', amount: 2000 },
-      { title: '2nd runner-up', amount: 1500 },
-      { title: 'IIITV first-year special', amount: 1000 },
-    ],
-    prizeTotal: 8000,
     organizers: dot,
   },
 
@@ -693,11 +617,6 @@ export const EVENT_DETAILS = {
       ...gamingRules,
     ],
     notes: gamingNotes,
-    prizes: [
-      { title: 'Winner', amount: 5000 },
-      { title: '1st runner-up', amount: 3000 },
-    ],
-    prizeTotal: 8000,
     organizers: arcadia,
   },
 
@@ -741,11 +660,6 @@ export const EVENT_DETAILS = {
       ...gamingNotes,
       'Teams must update their devices to the latest BGMI version before the event.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 3000 },
-      { title: 'Runner-up', amount: 2000 },
-    ],
-    prizeTotal: 5000,
     organizers: arcadia,
   },
 
@@ -790,11 +704,6 @@ export const EVENT_DETAILS = {
       ...gamingNotes,
       'Teams must update their devices to the latest CODM version before the event.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 2000 },
-      { title: 'Runner-up', amount: 1000 },
-    ],
-    prizeTotal: 3000,
     organizers: arcadia,
   },
 
@@ -838,11 +747,6 @@ export const EVENT_DETAILS = {
       'The registration link and deadlines will be shared closer to the event.',
       'Players must update to the latest Clash Royale version before the event.',
     ],
-    prizes: [
-      { title: 'Winner', amount: 2000 },
-      { title: 'Runner-up', amount: 1000 },
-    ],
-    prizeTotal: 3000,
     organizers: arcadia,
   },
 

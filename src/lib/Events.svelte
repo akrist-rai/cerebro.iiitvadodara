@@ -12,7 +12,6 @@
     whenLabel,
     clock,
     validDate,
-    rupees,
   } from './events.js';
 
   let { saved = [], ontoggle, onopen } = $props();
@@ -31,7 +30,6 @@
     mode = 'All';
     savedOnly = false;
   }
-  const top = (e) => e.prizes?.[0]?.amount;
 
   // "31 Oct · 10:00–12:00", or the hand-written date when there is one.
   function when(e) {
@@ -49,7 +47,7 @@
     n="03"
     kicker="events / the stamp album"
     title="Events"
-    blurb="Every challenge, collected as a stamp. Open one for its full briefing: format, rules, prizes and the people running it."
+    blurb="Every challenge, collected as a stamp. Open one for its full briefing: format, rules and the people running it."
   >
     <div class="collage">
       {#each [['n52', 16, 8, 0, -7], ['n42', 11, 24, 70, 5], ['n57', 12, 38, 4, 10], ['n36', 13, 56, 52, -6], ['n75', 17, 68, -4, 4], ['n31', 11, 84, 58, -9]] as [id, w, l, t, r]}
@@ -127,9 +125,6 @@
         <div class="inner">
           <header class="top">
             <span class="num">No. {String(event.num).padStart(2, '0')}</span>
-            <span class="den" title="Top prize"
-              >{top(event) ? rupees(top(event)) : '—'}</span
-            >
           </header>
 
           <button
@@ -404,11 +399,6 @@
     font-family: var(--pixel);
     font-size: 11px;
     color: var(--red);
-  }
-  .den {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
   }
   .art-btn {
     position: relative;

@@ -1,9 +1,5 @@
 <script>
-  
-
 </script>
-
-
 
 <style>
   .ticker {

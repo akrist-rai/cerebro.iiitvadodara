@@ -135,14 +135,14 @@
             <AsciiScene {event} cols={48} rows={23} hot={hot === event.id} />
             {#key event.id}
               {@const p = eventArt(event)}
-              <span class="poster" class:own={p.own}
+              <span class="poster"
                 ><Art
                   id={p.id}
                   tone={p.tone}
                   pos={p.pos}
                   ratio="48 / 46"
-                  dots={p.own ? 0 : 0.4}
-                  draw={!p.own}
+                  dots={0.4}
+                  draw
                 /></span
               >
             {/key}
@@ -448,11 +448,6 @@
   .art-btn:hover .poster,
   .art-btn:focus-visible .poster {
     --s: 0px;
-  }
-  /* an event's own poster is shown whole, as designed */
-  .poster.own {
-    -webkit-mask: none;
-    mask: none;
   }
   .art-btn:hover .poster :global(.duo) {
     opacity: 1;

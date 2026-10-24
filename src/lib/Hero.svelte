@@ -235,8 +235,6 @@
       </aside>
     </div>
   </div>
-
-  
 </section>
 
 <style>

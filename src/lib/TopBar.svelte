@@ -38,7 +38,6 @@
     {/each}
   </nav>
   <div class="right">
-   
     <button
       class="plan-link"
       onclick={onplan}
@@ -186,6 +185,7 @@
   .register {
     height: 32px;
     padding: 0 12px;
+    white-space: nowrap;
     border: 2px solid var(--ink);
     background: var(--red);
     color: var(--paper-hi);

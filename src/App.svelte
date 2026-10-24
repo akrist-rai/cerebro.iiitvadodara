@@ -3,12 +3,12 @@
   import TopBar from './lib/TopBar.svelte';
   import Hero from './lib/Hero.svelte';
   import Ticker from './lib/Ticker.svelte';
-  
+
   import Tracks from './lib/Tracks.svelte';
   import Events from './lib/Events.svelte';
   import Schedule from './lib/Schedule.svelte';
-  
-  
+  import Partners from './lib/Partners.svelte';
+
   import Footer from './lib/Footer.svelte';
   import EventDialog from './lib/EventDialog.svelte';
   import Palette from './lib/Palette.svelte';
@@ -156,8 +156,7 @@
   <main>
     <Hero />
     <Ticker />
-    
-  
+
     <Tracks onopen={openEvent} />
     <Events {saved} onopen={openEvent} ontoggle={toggleSaved} />
     <Schedule
@@ -166,8 +165,7 @@
       ontoggle={toggleSaved}
       bind:savedOnly={planOnly}
     />
-   
-   
+    <Partners />
   </main>
   <Footer onregister={openRegistration} />
 </div>

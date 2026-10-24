@@ -37,6 +37,8 @@
   let copyStatus = $state('');
   let now = $state(Date.now());
   const state = $derived(event ? registrationState(event, now) : null);
+  // An event's own poster is never blown up past 1.5x its pixels.
+  const ownPoster = $derived(event ? eventArt(event) : null);
 
   $effect(() => {
     if (!event && !hub) return;
@@ -166,7 +168,11 @@
           >
         {/if}
       </div>
-      <div class="scene" aria-hidden="true">
+      <div
+        class="scene"
+        aria-hidden="true"
+        style:max-width={ownPoster?.own ? `${ownPoster.w * 1.5}px` : null}
+      >
         {#key event.id}
           {@const p = eventArt(event)}
           {#if p.own}
@@ -497,6 +503,8 @@
   /* the event's poster, with its ASCII scene struck over it in gold */
   .scene {
     position: relative;
+    width: 100%;
+    margin-inline: auto;
     border: 2px solid var(--ink);
     background: var(--ink);
     color: var(--gold);

@@ -73,10 +73,23 @@ export const TRACK_ART = {
   CTF: ['g199', 'ink-paper', '50% 30%'],
 };
 
+// How each Figma poster sits in a stamp: [tone, crop]. The crop keeps the
+// title in frame; a tone pulls an off-palette poster into the site's inks
+// (the event briefing always shows the poster whole, in its own colours).
+export const POSTER_ART = {
+  'tech-hunt': ['', '50% 48%'],
+  'robo-race': ['', '50% 92%'],
+  'robo-soccer': ['', '50% 100%'],
+  'matiks-mania': ['ink-gold', '50% 26%'],
+  'retro-market': ['', '50% 24%'],
+};
+
 export const eventArt = (event) => {
-  // An event's own Figma poster wins, printed as designed.
-  if (posterMeta['p-' + event?.id])
-    return { ...art('p-' + event.id), tone: '', pos: '50% 35%', own: true };
+  // An event's own Figma poster wins over the library print.
+  if (posterMeta['p-' + event?.id]) {
+    const [tone, pos] = POSTER_ART[event.id] || ['', '50% 35%'];
+    return { ...art('p-' + event.id), tone, pos, own: true };
+  }
   const e = EVENT_ART[event?.id];
   const t = TRACK_ART[event?.track];
   const [id, tone, pos] = e || t || ['g33', '', '50% 20%'];

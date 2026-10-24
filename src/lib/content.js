@@ -285,6 +285,22 @@ export const TRACK_BLURB = {
   CTF: 'One detective story, thirteen locked chapters.',
 };
 
+// The sponsors on this year's posters. `id` picks the logo in Partners.svelte.
+export const SPONSORS = [
+  {
+    id: 'unstop',
+    name: 'Unstop',
+    url: 'https://unstop.com/',
+    note: 'Every Cerebro ’26 registration runs on Unstop.',
+  },
+  {
+    id: 'codecrafters',
+    name: 'CodeCrafters',
+    url: 'https://codecrafters.io/',
+    note: 'Build your own Redis, Git, SQLite and more, from scratch.',
+  },
+];
+
 // The sponsorship tiers from the deck. Amounts are left out on purpose: the
 // brochure (Annexure I) carries them, and their unit is not stated in the deck.
 export const TIERS = [

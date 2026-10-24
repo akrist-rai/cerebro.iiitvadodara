@@ -32,7 +32,6 @@
       >
     </nav>
   </div>
- 
 </footer>
 
 <style>

@@ -20,16 +20,16 @@ export const ABOUT =
 export const CEREBRO =
   'Cerebro is the annual technical festival of IIIT Vadodara, a national-level hybrid fest that brings students from across India together for inter-college technical events. It is a platform for technophiles to show their talent, wit, and intelligence.';
 
-// What the 2026-27 proposal commits to.
+// What the 2026-27 proposal commits to, plus Treasure of Code.
 export const FACTS = {
-  events: 15,
+  events: 16,
   participants: 3500,
   days: 7,
   mode: 'Hybrid',
   online: { from: '26 Oct', to: '30 Oct' },
   finals: { from: '31 Oct', to: '1 Nov' },
   split: [
-    ['Coding', 2],
+    ['Coding', 3],
     ['Design', 2],
     ['Gaming', 4],
     ['Finance', 2],
@@ -58,8 +58,8 @@ export const EVENTS = [
     kind: 'ceremony',
     name: 'Inauguration Ceremony',
     track: 'Ceremony',
-    meta: ['Offline', 'Finals day 1'],
-    lede: 'The *offline finals* of Cerebro ’26 open with the inauguration ceremony.',
+    meta: ['Offline', 'Finals day 2'],
+    lede: 'The *Director’s address* of Cerebro ’26: an introduction to the fest, speeches from the Technical Secretary, the Dean and the Director, and an expert talk.',
     more: [],
   },
   {
@@ -251,8 +251,21 @@ export const EVENTS = [
     ],
   },
   {
-    id: 'arcade-corner',
+    id: 'treasure-of-code',
     num: 16,
+    kind: 'event',
+    name: 'Treasure of Code',
+    track: 'Code',
+    meta: ['Solo', '5 linked stages'],
+    lede: '*Crack the code. Solve the riddle. Find the treasure.* Treasure of Code is a puzzle-driven programming hunt: five interconnected coding challenges, each paired with a riddle, where every output is the key to the next stage.',
+    more: [
+      'A 10-minute screening quiz decides who enters the hunt. From there, each stage’s input unlocks its riddle on the Treasure Map, and the program you write turns it into the next input, until the Stage 5 key leads to the treasure.',
+      'Organized by cout << "Masters";. The first to submit the correct final key, with the code behind it, wins.',
+    ],
+  },
+  {
+    id: 'arcade-corner',
+    num: 17,
     kind: 'zone',
     name: 'Arcade Corner',
     track: 'Gaming',
@@ -277,7 +290,7 @@ export const TRACKS = [
 
 export const TRACK_BLURB = {
   Robotics: 'Bots built by you, tested on a real track and a real pitch.',
-  Code: 'Algorithms, teamwork under silence, and three hours of pure contest.',
+  Code: 'Algorithms, teamwork under silence, a five-stage treasure hunt and three hours of pure contest.',
   Design: 'From abstract clues to working front-ends.',
   Finance: 'Paper slips, loud bids and a ₹10 lakh virtual portfolio.',
   Math: 'Buzzers, speed duels and problems that bite back.',

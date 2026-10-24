@@ -2,7 +2,7 @@
 
 Event copy lives in `src/lib/content.js`. Event operations live in `src/lib/event-details.js`, keyed by the same stable event IDs. Edit these files and rebuild; no backend or CMS is required.
 
-The content was filled from **CERBRO 2026-27 OFFICIAL PROPOSAL** (the master schedule and annexures A–P). Anything the proposal does not state is `null` or an empty list and is shown as "To be announced". Never infer a value.
+The content was filled from **CERBRO 2026-27 OFFICIAL PROPOSAL** (the master schedule and annexures A–P). Times and rooms come from **Event_TimeTable - Sheet1.pdf**, which supersedes the proposal's master schedule. Treasure of Code comes from **Treasure_of_Code_details.pdf**. Anything the sources do not state is `null` or an empty list and is shown as "To be announced". Never infer a value.
 
 ## Per-event fields (`event-details.js`)
 
@@ -23,22 +23,32 @@ The content was filled from **CERBRO 2026-27 OFFICIAL PROPOSAL** (the master sch
 
 `kind` in `content.js` is `event`, `zone` (Arcade Corner) or `ceremony` (the inauguration). Only events and zones appear in the directory; the ceremony only appears on the schedule.
 
-## Where the proposal contradicts itself
+## Where the sources contradict each other
 
-The **master schedule table** is treated as authoritative. Check these with the organizers before publishing:
+The **event timetable** is treated as authoritative for times and rooms. Check these with the organizers before publishing:
 
-| Item                  | Master schedule                    | Annexure says                     |
-| --------------------- | ---------------------------------- | --------------------------------- |
-| Equinox               | 31 Oct, 10:00–12:00                | 30 Oct, 2 hrs                     |
-| Tech Hunt             | 31 Oct, 12:00–18:00                | 30 Oct, 2:00–7:00 PM              |
-| D2D                   | 31 Oct, 13:00–14:00                | 30 Oct, three phases              |
-| Robo Race             | 31 Oct, 16:00–18:00                | 30 Oct, 04:00–06:00               |
-| Robo Soccer           | 1 Nov, 15:00–18:00                 | 31 Oct                            |
-| Trio-Codejam          | 1 Nov, 11:00–13:00                 | 31 Oct                            |
-| CodeClash end time    | `12:00 PM` after a `9:00 PM` start | 3 hours, so shown as 00:00        |
-| Gaming leagues        | "Both days", no times              | "Last week of October", online    |
-| CodeClash prize total | ₹9,750                             | Rows sum to ₹8,550; total omitted |
-| Robo Race format      | Deck: knockout                     | Proposal: one timed run each      |
+| Item                  | Timetable / master schedule        | Proposal or annexure says           |
+| --------------------- | ---------------------------------- | ----------------------------------- |
+| Inauguration          | 1 Nov, 10:30–12:00, 9001           | Proposal: 31 Oct, 09:00–10:00       |
+| Equinox               | 31 Oct, 09:00–11:00, 9101          | 31 Oct 10:00–12:00; annexure 30 Oct |
+| Tech Hunt             | 31 Oct, 12:00–18:00                | 30 Oct, 2:00–7:00 PM                |
+| D2D                   | 31 Oct, 11:00–12:00                | 31 Oct 13:00–14:00; annexure 30 Oct |
+| Robo Race             | 31 Oct, 16:00–18:00                | 30 Oct, 04:00–06:00                 |
+| Robo Soccer           | 1 Nov, 15:00–18:00                 | 31 Oct                              |
+| Trio-Codejam          | 31 Oct, 14:00–16:00, 9102 A/B      | 1 Nov 11:00–13:00; annexure 31 Oct  |
+| CodeClash end time    | `12:00 PM` after a `9:00 PM` start | 3 hours, so shown as 00:00          |
+| Gaming leagues        | "Both days", no times              | "Last week of October", online      |
+| CodeClash prize total | ₹9,750                             | Rows sum to ₹8,550; total omitted   |
+| Robo Race format      | Deck: knockout                     | Proposal: one timed run each        |
+
+The timetable itself is ambiguous in a few places:
+
+- The **Director Addressing** row sits under Day 2, but its programme box sits beside Day 1 and only Day 1's room list books 9001 before noon. Shown on Day 2.
+- **Matiks Mania** is in 9101 on the grid, but Day 2's room list books 9001 (09:00–11:00, 150 users) and no 9101. Shown in 9101.
+- **Trio-Codejam**'s room reads `9012A/B`; there is no 9012, and Day 1 books 9102A/B until 4 PM, so it is shown as 9102 A/B.
+- **E-Cell's Shark Tank** (1 Nov, 10:00–13:00, Conference Room), the **Photo Booth** and the **Graffiti Wall** are on the timetable but have no event copy yet, so they are not on the site.
+
+The Treasure of Code brief also contradicts itself on Round 2 (participants' own laptops vs "the lab systems provided"; "internet-based platform" vs "no internet"). Those points are left off the site.
 
 Other things to verify: the Robo Soccer annexure repeats Aditya Vikram's number for Ojas Naringe (Robo Race's number is used); Tanishq Singhal has two different contacts across annexures, so none is published; two organizer emails are malformed in the PDF and were left out.
 

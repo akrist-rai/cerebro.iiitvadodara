@@ -24,7 +24,7 @@
     n="02"
     kicker="tracks / ls -la"
     title="Tracks"
-    blurb="Seven disciplines, fifteen events. Open a track to see what is inside."
+    blurb="Seven disciplines, sixteen events. Open a track to see what is inside."
   />
 
   <div class="contact" aria-hidden="true">

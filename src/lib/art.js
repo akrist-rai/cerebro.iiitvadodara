@@ -59,6 +59,7 @@ export const EVENT_ART = {
   bgmi: ['g190', '', '50% 20%'],
   codm: ['g229', '', '50% 20%'],
   'clash-royale': ['g238', '', '50% 30%'],
+  'treasure-of-code': ['n11', 'ink-gold', '50% 50%'],
   'arcade-corner': ['n55', 'ink-red', '50% 50%'],
 };
 

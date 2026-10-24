@@ -7,13 +7,13 @@ test('event discovery combines search and track filters, including empty state',
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
-  await expect(page.locator('.stamp')).toHaveCount(16);
+  await expect(page.locator('.stamp')).toHaveCount(17);
   await page.getByRole('searchbox').fill('robo');
   await expect(page.locator('.stamp')).toHaveCount(2);
   await page.locator('.filters').getByRole('button', { name: /^Code/ }).click();
   await expect(page.getByText('No events found.')).toBeVisible();
   await page.getByRole('button', { name: 'Show all events' }).click();
-  await expect(page.locator('.stamp')).toHaveCount(16);
+  await expect(page.locator('.stamp')).toHaveCount(17);
   await page
     .getByRole('combobox', { name: 'Event mode' })
     .selectOption('Online');

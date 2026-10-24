@@ -1,7 +1,8 @@
 // The operational source of truth, taken from the CEREBRO 2026-27 official
-// proposal. Where the master schedule and an event's own annexure disagree, the
-// master schedule wins (see docs/EVENT_CONTENT.md). Null means the organizing
-// team has not supplied a confirmed value; never infer one.
+// proposal. Times and rooms follow the event timetable (Event_TimeTable), which
+// supersedes the proposal's master schedule; where either disagrees with an
+// event's own annexure, the timetable wins (see docs/EVENT_CONTENT.md). Null
+// means the organizing team has not supplied a confirmed value; never infer one.
 const CAMPUS = 'IIIT Vadodara · Gandhinagar Campus';
 const at = (day, time) => `${day}T${time}:00+05:30`;
 const D1 = '2026-10-31';
@@ -126,12 +127,25 @@ export const EVENT_DETAILS = {
     ...pending(),
     mode: 'In person',
     teamSize: null,
-    duration: '1 hr',
-    startsAt: at(D1, '09:00'),
-    endsAt: at(D1, '10:00'),
-    slots: ['d1'],
+    duration: '1 hr 30 min',
+    startsAt: at(D2, '10:30'),
+    endsAt: at(D2, '12:00'),
+    slots: ['d2'],
     venue: CAMPUS,
+    room: '9001',
     club: 'Technical Committee',
+    details: [
+      {
+        title: 'Programme',
+        items: [
+          '10:30–10:45: introduction to the event',
+          '10:45–10:55: Technical Secretary’s speech',
+          '10:55–11:05: Dean’s speech',
+          '11:05–11:15: Director’s speech',
+          '11:15–12:00: expert talk',
+        ],
+      },
+    ],
   },
 
   equinox: {
@@ -139,11 +153,11 @@ export const EVENT_DETAILS = {
     mode: 'In person',
     teamSize: '2 members',
     duration: '2 hrs',
-    startsAt: at(D1, '10:00'),
-    endsAt: at(D1, '12:00'),
+    startsAt: at(D1, '09:00'),
+    endsAt: at(D1, '11:00'),
     slots: ['d1'],
     venue: CAMPUS,
-    room: '9001 & 9101',
+    room: '9101',
     club: 'Enigma · The Mathematics Club',
     eligibility: 'All students of IIIT Vadodara.',
     objective:
@@ -200,7 +214,9 @@ export const EVENT_DETAILS = {
 
   prudentia: {
     ...pending(),
-    registration: unstop('competitions/prudentia-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773344'),
+    registration: unstop(
+      'competitions/prudentia-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773344',
+    ),
     ...online,
     teamSize: 'Individual',
     duration: '5 days',
@@ -243,7 +259,9 @@ export const EVENT_DETAILS = {
 
   'robo-race': {
     ...pending(),
-    registration: unstop('p/robo-race-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773606'),
+    registration: unstop(
+      'p/robo-race-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773606',
+    ),
     mode: 'In person',
     teamSize: 'Up to 4 members',
     duration: '2 hrs',
@@ -329,7 +347,9 @@ export const EVENT_DETAILS = {
 
   'robo-soccer': {
     ...pending(),
-    registration: unstop('p/robo-soccer-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773648'),
+    registration: unstop(
+      'p/robo-soccer-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773648',
+    ),
     mode: 'In person',
     teamSize: '4 members',
     duration: '3 hrs',
@@ -395,11 +415,11 @@ export const EVENT_DETAILS = {
     mode: 'In person',
     teamSize: '3 members',
     duration: '2 hrs',
-    startsAt: at(D2, '11:00'),
-    endsAt: at(D2, '13:00'),
-    slots: ['d2'],
+    startsAt: at(D1, '14:00'),
+    endsAt: at(D1, '16:00'),
+    slots: ['d1'],
     venue: CAMPUS,
-    room: '9101',
+    room: '9102 A/B',
     club: 'Coding Club',
     eligibility:
       'Currently enrolled students; all members of a team must be from the same college.',
@@ -478,12 +498,14 @@ export const EVENT_DETAILS = {
 
   d2d: {
     ...pending(),
-    registration: unstop('p/design-to-developd2d-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773721'),
+    registration: unstop(
+      'p/design-to-developd2d-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773721',
+    ),
     mode: 'In person',
     teamSize: '3 members',
     duration: '1 hr',
-    startsAt: at(D1, '13:00'),
-    endsAt: at(D1, '14:00'),
+    startsAt: at(D1, '11:00'),
+    endsAt: at(D1, '12:00'),
     slots: ['d1'],
     venue: CAMPUS,
     room: '9111',
@@ -524,7 +546,9 @@ export const EVENT_DETAILS = {
 
   'matiks-mania': {
     ...pending(),
-    registration: unstop('p/matiks-mania-indian-institute-of-information-technology-vadodara-1773752'),
+    registration: unstop(
+      'p/matiks-mania-indian-institute-of-information-technology-vadodara-1773752',
+    ),
     mode: 'In person',
     teamSize: 'Solo',
     duration: '2 hrs',
@@ -532,7 +556,7 @@ export const EVENT_DETAILS = {
     endsAt: at(D2, '11:00'),
     slots: ['d2'],
     venue: CAMPUS,
-    room: '9001',
+    room: '9101',
     club: 'Enigma · The Mathematics Club',
     eligibility: 'All students of IIIT Vadodara.',
     objective:
@@ -595,7 +619,9 @@ export const EVENT_DETAILS = {
 
   valorant: {
     ...pending(),
-    registration: unstop('p/valorant-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773621'),
+    registration: unstop(
+      'p/valorant-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773621',
+    ),
     ...online,
     teamSize: '5 players + up to 2 subs',
     duration: 'Last week of October',
@@ -635,7 +661,9 @@ export const EVENT_DETAILS = {
 
   bgmi: {
     ...pending(),
-    registration: unstop('p/bgmi-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1774263'),
+    registration: unstop(
+      'p/bgmi-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1774263',
+    ),
     ...online,
     teamSize: '4 players + 1 sub',
     duration: 'Last week of October',
@@ -679,7 +707,9 @@ export const EVENT_DETAILS = {
 
   codm: {
     ...pending(),
-    registration: unstop('p/codm-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773718'),
+    registration: unstop(
+      'p/codm-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773718',
+    ),
     ...online,
     teamSize: '5 players + 1 sub',
     duration: 'Last week of October',
@@ -724,7 +754,9 @@ export const EVENT_DETAILS = {
 
   'clash-royale': {
     ...pending(),
-    registration: unstop('p/clash-royale-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773719'),
+    registration: unstop(
+      'p/clash-royale-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773719',
+    ),
     ...online,
     teamSize: 'Solo',
     duration: 'Last week of October',
@@ -766,6 +798,75 @@ export const EVENT_DETAILS = {
     organizers: arcadia,
   },
 
+  'treasure-of-code': {
+    ...pending(),
+    mode: 'In person',
+    teamSize: 'Solo',
+    duration: '2 hrs',
+    startsAt: at(D1, '12:00'),
+    endsAt: at(D1, '14:00'),
+    slots: ['d1'],
+    venue: CAMPUS,
+    room: '9102 A/B',
+    club: 'cout << "Masters";',
+    eligibility:
+      'All students of IIIT Vadodara. Participation is strictly individual.',
+    objective:
+      'Practise programming and algorithmic thinking in a competitive setting, and build logical reasoning through riddles, clues and interconnected challenges.',
+    details: [
+      {
+        title: 'Two rounds',
+        items: [
+          'Round 1, screening quiz (12:05–12:15): 20 questions at 30 seconds each on programming concepts, output prediction, aptitude and logical puzzles, played on your phone.',
+          'Round 2, the hunt (12:25–13:55): five stages in strict sequence for those who qualify; no stage can be skipped.',
+        ],
+      },
+      {
+        title: 'How a stage works',
+        items: [
+          'Stage 1 starts from an input given on the coding platform.',
+          'Use the input on the Treasure Map to unlock the stage’s riddle.',
+          'Solve the coding problem with the same input; its output is the key.',
+          'That output is the next stage’s input, and the Stage 5 key leads to the treasure.',
+        ],
+      },
+      {
+        title: 'Coding platform',
+        items: [
+          'Languages: C, C++, Java or Python.',
+          'One browser only (Chrome recommended).',
+          'Standard language libraries only; offline documentation is available.',
+        ],
+      },
+      {
+        title: 'Timeline',
+        items: [
+          '12:00–12:05: registration, seating and briefing',
+          '12:05–12:15: Round 1, screening quiz',
+          '12:15–12:25: evaluation and announcement of qualifiers',
+          '12:25–13:55: Round 2, Treasure of Code',
+          '13:55–14:00: closing',
+        ],
+      },
+    ],
+    rules: [
+      'Carry a valid institute ID card and report by 12:00 PM sharp.',
+      'The quiz is strictly time-bound; answers submitted after the 10 minutes are not considered.',
+      'Only participants announced as qualified after Round 1 take part in Round 2; quiz ties are broken by submission time.',
+      'Mobile phones, smartwatches and any external storage are prohibited in Round 2.',
+      'Pre-written code, notes and printed material may not be used.',
+      'Every key must come from actually solving the problem; sharing or guessing keys earns only 10% of the points.',
+      'Programs must run on the coding platform, and a coordinator may ask you to demonstrate your solution.',
+      'Ranking is by stages cleared, then total time; each incorrect key and each hint adds a time penalty.',
+      'Communicating with other participants, copying, or tampering with systems or clues means disqualification.',
+      'Leave the lab only with permission. The organizers’ decision is final.',
+    ],
+    notes: [
+      'Bring your laptop and accessories (charger, mouse), pens, blank white paper and a water bottle if needed.',
+      'Charging points are provided. The quiz and coding-platform links are shared on the day.',
+    ],
+  },
+
   'arcade-corner': {
     ...pending(),
     mode: 'In person',
@@ -777,7 +878,7 @@ export const EVENT_DETAILS = {
     timeText: '10:00 AM – 6:00 PM IST',
     slots: ['d1', 'd2'],
     venue: CAMPUS,
-    room: '9011',
+    room: '9011 & 9105',
     club: 'Arcadia Gaming Club',
     objective:
       'A high-engagement recreational space for participants and spectators that adds a fun, social dimension to the festival.',

@@ -501,6 +501,26 @@ export const SCENES = {
     s.box(50, 90, 30, 2, 0);
   },
 
+  'treasure-of-code'(s, t) {
+    s.text('<<', 6, 6, 3, 1);
+    // a dashed trail across the map, five stages to the X
+    const P = [
+      [12, 88],
+      [22, 30],
+      [66, 100],
+      [76, 32],
+    ];
+    for (let i = 0; i <= 48; i++)
+      if (i % 4 < 2) s.disc(...bezier(...P, i / 48), 1.4, 0.75);
+    for (let k = 0; k < 5; k++) s.disc(...bezier(...P, k / 5), 3.2, 1);
+    const [mx, my] = bezier(...P, (t * 0.2) % 1);
+    s.ring(mx, my, 6, 1.6, 1);
+    // X marks the spot
+    const r = 9 + S(t * 4) * 1.2;
+    s.line(76 - r, 32 - r, 76 + r, 32 + r, 4, 1);
+    s.line(76 + r, 32 - r, 76 - r, 32 + r, 4, 1);
+  },
+
   inauguration(s, t) {
     const R = 24;
     s.ring(50, 50, R, 3, 1);

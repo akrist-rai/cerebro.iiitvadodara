@@ -190,7 +190,7 @@
       </div>
       <p class="eyebrow tag"><span class="cursor"></span> Beyond the horizon</p>
       <h2>
-        15 events.<br />One fest.<br />
+        16 events.<br />One fest.<br />
       </h2>
       <p class="copy">
         The annual technical festival of IIIT Vadodara. Code, robots, design,

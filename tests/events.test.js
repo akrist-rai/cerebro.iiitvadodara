@@ -206,8 +206,8 @@ describe('dates and calendar export', () => {
 });
 
 describe('proposal data', () => {
-  it('lists fifteen competitions plus the arcade zone and the ceremony', () => {
-    assert.equal(catalog.filter((e) => e.kind === 'event').length, 15);
+  it('lists sixteen competitions plus the arcade zone and the ceremony', () => {
+    assert.equal(catalog.filter((e) => e.kind === 'event').length, 16);
     assert.equal(catalog.filter((e) => e.kind === 'zone').length, 1);
     assert.equal(catalog.filter((e) => e.kind === 'ceremony').length, 1);
   });

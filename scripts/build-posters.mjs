@@ -26,6 +26,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const src = path.join(root, 'posters');
 const out = path.join(root, 'public/art');
 const ids = new Set(EVENTS.map((event) => event.id));
+const WIDTH = 900;
 fs.mkdirSync(out, { recursive: true });
 
 // Old outputs go first, so a removed poster stops being served.
@@ -42,10 +43,24 @@ for (const file of files.sort()) {
     console.warn('skipped', file, '- not an event id in content.js');
     continue;
   }
-  const { data, info } = await sharp(path.join(src, file), { failOn: 'none' })
+  let source = await sharp(path.join(src, file), { failOn: 'none' })
     .rotate()
-    .resize({ width: 900, fit: 'inside', withoutEnlargement: true })
-    .webp({ quality: 80, effort: 5 })
+    .toBuffer();
+  // A poster cut from a screenshot is far below print width. Rather than let
+  // the browser stretch it soft, enlarge it here in 2x Lanczos steps, each
+  // followed by an unsharp mask, up to 4x or the 900px target.
+  let { width } = await sharp(source).metadata();
+  const target = Math.min(WIDTH, width * 4);
+  while (width < target) {
+    width = Math.min(width * 2, target);
+    source = await sharp(source)
+      .resize({ width, kernel: 'lanczos3' })
+      .sharpen({ sigma: width < target ? 0.8 : 1.4, m1: 0.6, m2: 3 })
+      .toBuffer();
+  }
+  const { data, info } = await sharp(source)
+    .resize({ width: WIDTH, fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: 86, effort: 5 })
     .toBuffer({ resolveWithObject: true });
   const id = 'p-' + name;
   fs.writeFileSync(path.join(out, id + '.webp'), data);

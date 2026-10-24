@@ -40,7 +40,7 @@
     background: var(--ink);
     color: var(--paper);
     --shade: var(--red);
-    --dim: #aaa493;
+    --dim: #a9a09c;
     overflow: hidden;
   }
   .closing {
@@ -100,7 +100,7 @@
     }
   }
   .eyebrow {
-    color: var(--lime);
+    color: var(--gold);
     margin-bottom: 18px;
   }
   .big {
@@ -116,7 +116,7 @@
     box-shadow: 4px 4px 0 var(--red);
   }
   .btn:hover {
-    background: var(--lime);
+    background: var(--gold);
     box-shadow: 6px 6px 0 var(--red);
   }
   .foot {
@@ -137,7 +137,7 @@
     font-weight: 700;
   }
   nav a:hover {
-    background: var(--lime);
+    background: var(--gold);
     color: var(--ink);
   }
   .exit {

@@ -140,8 +140,8 @@
   }
   .contact button.on {
     transform: translateY(-10px);
-    box-shadow: 4px 6px 0 var(--lime);
-    border-color: var(--lime);
+    box-shadow: 4px 6px 0 var(--gold);
+    border-color: var(--gold);
   }
   .contact :global(.art) {
     width: 100%;
@@ -151,12 +151,12 @@
     left: 0;
     bottom: 0;
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     font-size: 8px;
     padding: 1px 4px;
   }
   .contact button.on .eyebrow {
-    background: var(--lime);
+    background: var(--gold);
     color: var(--ink);
   }
   @media (max-width: 980px) {
@@ -202,7 +202,7 @@
   }
   .open .head,
   .head:hover {
-    color: var(--lime);
+    color: var(--gold);
   }
   .body {
     display: grid;
@@ -258,16 +258,16 @@
     font-size: 12px;
   }
   .evs button:hover {
-    color: var(--lime);
+    color: var(--gold);
   }
   .art-wrap {
-    color: var(--lime);
+    color: var(--gold);
     max-width: 440px;
     justify-self: end;
     width: 100%;
     padding: 0 10px 10px 0;
   }
-  /* the poster is the plate; the ASCII scene is struck over it in lime */
+  /* the poster is the plate; the ASCII scene is struck over it in gold */
   .plate {
     position: relative;
     border: 2px solid var(--paper);
@@ -279,7 +279,7 @@
     inset: 0;
     overflow: hidden;
     mix-blend-mode: screen;
-    color: var(--lime);
+    color: var(--gold);
     display: grid;
     align-items: center;
     opacity: 0.9;
@@ -288,7 +288,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: var(--lime);
+    background: var(--gold);
     color: var(--ink);
     padding: 3px 8px;
     font-size: 9px;

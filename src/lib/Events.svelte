@@ -41,7 +41,7 @@
   }
 </script>
 
-<section id="events" class="sec sec--blue" aria-labelledby="events-title">
+<section id="events" class="sec sec--crimson" aria-labelledby="events-title">
   <SectionHead
     id="events-title"
     n="03"
@@ -135,14 +135,14 @@
             <AsciiScene {event} cols={48} rows={23} hot={hot === event.id} />
             {#key event.id}
               {@const p = eventArt(event)}
-              <span class="poster"
+              <span class="poster" class:own={p.own}
                 ><Art
                   id={p.id}
                   tone={p.tone}
                   pos={p.pos}
                   ratio="48 / 46"
-                  dots={0.4}
-                  draw
+                  dots={p.own ? 0 : 0.4}
+                  draw={!p.own}
                 /></span
               >
             {/key}
@@ -240,7 +240,7 @@
     flex: 1 1 280px;
     min-width: 0;
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     border: 2px solid var(--paper);
     padding: 0 14px;
   }
@@ -252,16 +252,16 @@
     border: 0;
     width: 100%;
     min-height: 44px;
-    color: var(--lime);
+    color: var(--gold);
     font-size: 14px;
     outline: none;
   }
   .search:focus-within {
-    outline: 3px solid var(--lime);
+    outline: 3px solid var(--gold);
     outline-offset: 2px;
   }
   .search input::placeholder {
-    color: color-mix(in srgb, var(--lime) 55%, transparent);
+    color: color-mix(in srgb, var(--gold) 55%, transparent);
   }
   .mode select {
     background: var(--paper-hi);
@@ -284,7 +284,7 @@
     font-weight: 700;
   }
   .saved-filter.selected {
-    background: var(--lime);
+    background: var(--gold);
   }
   .filters {
     display: flex;
@@ -310,9 +310,9 @@
     opacity: 0.8;
   }
   .filters button.chosen {
-    background: var(--lime);
+    background: var(--gold);
     color: var(--ink);
-    border-color: var(--lime);
+    border-color: var(--gold);
   }
   .filters button.chosen::before {
     content: '[x]' / '';
@@ -326,7 +326,7 @@
     color: var(--paper-hi);
   }
   .results b {
-    background: var(--lime);
+    background: var(--gold);
     color: var(--ink);
     padding: 0 6px;
   }
@@ -340,10 +340,10 @@
   .stamp {
     --r: 5px;
     --p: 18px;
-    --dim: #5d584a;
-    --hair: #b8af96;
+    --dim: #5f5552;
+    --hair: #bda59c;
     color: var(--ink);
-    filter: drop-shadow(5px 6px 0 #0b0f5f);
+    filter: drop-shadow(5px 6px 0 #4a0a0d);
     container-type: inline-size;
   }
   .inner {
@@ -413,7 +413,7 @@
   }
   .art-btn:hover,
   .art-btn:focus-visible {
-    background: var(--lime);
+    background: var(--gold);
   }
   /* the poster sits over the ASCII scene and dissolves into a dot screen
      on hover, which is what the scene was printed from */
@@ -448,6 +448,11 @@
   .art-btn:hover .poster,
   .art-btn:focus-visible .poster {
     --s: 0px;
+  }
+  /* an event's own poster is shown whole, as designed */
+  .poster.own {
+    -webkit-mask: none;
+    mask: none;
   }
   .art-btn:hover .poster :global(.duo) {
     opacity: 1;
@@ -506,7 +511,7 @@
   }
   h3 button:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .description {
     margin: 0 0 12px;
@@ -572,7 +577,7 @@
   .card-bottom .details:hover,
   .card-bottom .register:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .card-bottom .save {
     width: 34px;
@@ -583,7 +588,7 @@
   }
   .card-bottom .save.bookmarked {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .empty,
   .empty p {

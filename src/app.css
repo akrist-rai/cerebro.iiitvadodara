@@ -1,17 +1,19 @@
 /* CEREBRO ’26 — printed in ASCII.
    Thermal-paper receipts, postage stamps and two-colour riso ink, set in
-   monospace. Everything that looks like type art is real characters. */
+   monospace. Everything that looks like type art is real characters.
+   Inks are the Ephemeral ’26 identity: sumi black, washi cream, vermilion,
+   a deeper crimson and gold. */
 :root {
-  --paper: #f1ecdf;
-  --paper-hi: #fbf8ef;
-  --paper-2: #e6dfc9;
-  --ink: #14130f;
-  --ink-2: #26241c;
-  --dim: #5d584a;
-  --hair: #b8af96;
-  --red: #e5391f;
-  --blue: #2535ff;
-  --lime: #d6f23a;
+  --paper: #f1e3dd;
+  --paper-hi: #faf2ee;
+  --paper-2: #e7d3cb;
+  --ink: #161619;
+  --ink-2: #26252a;
+  --dim: #5f5552;
+  --hair: #bda59c;
+  --red: #f3252b;
+  --crimson: #b01a20;
+  --gold: #e8b860;
   --mono:
     'JetBrains Mono Variable', ui-monospace, 'Cascadia Mono', 'SF Mono',
     Consolas, 'Liberation Mono', monospace;
@@ -70,12 +72,12 @@ a {
   color: inherit;
 }
 :focus-visible {
-  outline: 3px solid var(--blue);
+  outline: 3px solid var(--crimson);
   outline-offset: 3px;
 }
 ::selection {
   background: var(--ink);
-  color: var(--lime);
+  color: var(--gold);
 }
 h1,
 h2,
@@ -148,9 +150,9 @@ ul {
 /* the drop shadow is a dither, so it reads as ink and not as a second letter */
 .art .s {
   background: conic-gradient(
-      var(--shade, var(--blue)) 25%,
+      var(--shade, var(--crimson)) 25%,
       transparent 0 50%,
-      var(--shade, var(--blue)) 0 75%,
+      var(--shade, var(--crimson)) 0 75%,
       transparent 0
     )
     0 0 / 0.3em 0.3em;
@@ -165,22 +167,22 @@ ul {
   --shade: var(--red);
   background: var(--ink);
   color: var(--paper);
-  --dim: #aaa493;
-  --hair: #4a463a;
+  --dim: #a9a09c;
+  --hair: #45403f;
 }
-.sec--blue {
-  --shade: var(--lime);
-  background: var(--blue);
+.sec--crimson {
+  --shade: var(--gold);
+  background: var(--crimson);
   color: var(--paper-hi);
-  --dim: #c9ceff;
-  --hair: #6c78ff;
+  --dim: #f3c9c4;
+  --hair: #d4555a;
 }
-.sec--lime {
-  --shade: var(--blue);
-  background: var(--lime);
+.sec--gold {
+  --shade: var(--crimson);
+  background: var(--gold);
   color: var(--ink);
-  --dim: #3c4310;
-  --hair: #a9bf1e;
+  --dim: #5a4316;
+  --hair: #c3974a;
 }
 .sec--paper2 {
   background: var(--paper-2);
@@ -245,7 +247,7 @@ ul {
 .btn:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 var(--ink);
-  background: var(--lime);
+  background: var(--gold);
 }
 .btn:active {
   transform: translate(3px, 3px);
@@ -257,7 +259,7 @@ ul {
 }
 .btn.red:hover {
   background: var(--ink);
-  color: var(--lime);
+  color: var(--gold);
 }
 .btn.ink {
   background: var(--ink);
@@ -265,7 +267,7 @@ ul {
   box-shadow: 4px 4px 0 var(--red);
 }
 .btn.ink:hover {
-  background: var(--lime);
+  background: var(--gold);
   color: var(--ink);
 }
 .btn.ghost {
@@ -285,12 +287,12 @@ ul {
   box-shadow: 3px 3px 0 var(--ink);
 }
 .sec--ink .btn,
-.sec--blue .btn {
+.sec--crimson .btn {
   border-color: var(--paper);
   box-shadow: 4px 4px 0 var(--paper);
 }
 .sec--ink .btn:hover,
-.sec--blue .btn:hover {
+.sec--crimson .btn:hover {
   box-shadow: 6px 6px 0 var(--paper);
 }
 .sec--ink .btn.ink {
@@ -312,7 +314,7 @@ ul {
   text-decoration-thickness: 2px;
 }
 .link:hover {
-  background: var(--lime);
+  background: var(--gold);
   color: var(--ink);
 }
 .icon-button {
@@ -328,7 +330,7 @@ ul {
 }
 .icon-button:hover {
   background: var(--ink);
-  color: var(--lime);
+  color: var(--gold);
 }
 
 /* ── inline marks ───────────────────────────────────────────────── */
@@ -336,16 +338,16 @@ b {
   font-weight: 700;
   background: linear-gradient(
     transparent 55%,
-    color-mix(in srgb, var(--lime) 85%, transparent) 55%
+    color-mix(in srgb, var(--gold) 85%, transparent) 55%
   );
   padding: 0 0.1em;
 }
-.sec--lime b {
+.sec--gold b {
   background: linear-gradient(transparent 55%, #fff8 55%);
 }
 .sec--ink b {
   background: none;
-  color: var(--lime);
+  color: var(--gold);
 }
 
 /* chips + pills */
@@ -415,7 +417,7 @@ b {
 }
 .win-bar i {
   font-style: normal;
-  color: var(--lime);
+  color: var(--gold);
 }
 .win-bar span:last-child {
   margin-left: auto;
@@ -589,14 +591,14 @@ body::after {
   width: 62px;
   height: 20px;
   transform: translateX(-50%) rotate(-3deg);
-  background: color-mix(in srgb, var(--lime) 82%, transparent);
+  background: color-mix(in srgb, var(--gold) 82%, transparent);
   border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
 }
 
 /* each coloured band is punched along its top edge, like a tear-off ticket */
 .sec--ink::before,
-.sec--blue::before,
-.sec--lime::before,
+.sec--crimson::before,
+.sec--gold::before,
 .sec--paper2::before {
   content: '';
   position: absolute;

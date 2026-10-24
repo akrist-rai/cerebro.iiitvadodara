@@ -27,8 +27,10 @@ const example = {
 const before = Date.parse('2027-01-01T00:00:00Z');
 describe('event registration', () => {
   it('never enables registration without a real HTTP(S) URL', () => {
-    for (const event of catalog)
-      assert.equal(registrationState(event, before).url, null);
+    for (const event of catalog) {
+      const { url } = registrationState(event, before);
+      assert.ok(url === null || url.startsWith('https://'), event.id);
+    }
     for (const url of [
       null,
       '#',

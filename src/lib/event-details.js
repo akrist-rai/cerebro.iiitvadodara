@@ -27,6 +27,13 @@ const pending = () => ({
   registration: { status: 'upcoming', url: null, deadline: null },
 });
 
+// An open registration on the event's Unstop listing.
+const unstop = (path) => ({
+  status: 'open',
+  url: `https://unstop.com/${path}`,
+  deadline: null,
+});
+
 const person = (name, role, email, phone) => ({
   name,
   role,
@@ -109,7 +116,7 @@ const gamingRules = [
   'Organizers’ and referees’ decisions are final.',
 ];
 const gamingNotes = [
-  'The registration link and deadlines will be shared closer to the event.',
+  'Registration is on Unstop; check the listing there for the deadline.',
   'Referees and observers are present in all matches to ensure fair play.',
 ];
 const online = { mode: 'Online', venue: 'Online' };
@@ -193,6 +200,7 @@ export const EVENT_DETAILS = {
 
   prudentia: {
     ...pending(),
+    registration: unstop('competitions/prudentia-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773344'),
     ...online,
     teamSize: 'Individual',
     duration: '5 days',
@@ -235,6 +243,7 @@ export const EVENT_DETAILS = {
 
   'robo-race': {
     ...pending(),
+    registration: unstop('p/robo-race-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773606'),
     mode: 'In person',
     teamSize: 'Up to 4 members',
     duration: '2 hrs',
@@ -320,6 +329,7 @@ export const EVENT_DETAILS = {
 
   'robo-soccer': {
     ...pending(),
+    registration: unstop('p/robo-soccer-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773648'),
     mode: 'In person',
     teamSize: '4 members',
     duration: '3 hrs',
@@ -468,6 +478,7 @@ export const EVENT_DETAILS = {
 
   d2d: {
     ...pending(),
+    registration: unstop('p/design-to-developd2d-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773721'),
     mode: 'In person',
     teamSize: '3 members',
     duration: '1 hr',
@@ -513,6 +524,7 @@ export const EVENT_DETAILS = {
 
   'matiks-mania': {
     ...pending(),
+    registration: unstop('p/matiks-mania-indian-institute-of-information-technology-vadodara-1773752'),
     mode: 'In person',
     teamSize: 'Solo',
     duration: '2 hrs',
@@ -583,6 +595,7 @@ export const EVENT_DETAILS = {
 
   valorant: {
     ...pending(),
+    registration: unstop('p/valorant-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773621'),
     ...online,
     teamSize: '5 players + up to 2 subs',
     duration: 'Last week of October',
@@ -622,6 +635,7 @@ export const EVENT_DETAILS = {
 
   bgmi: {
     ...pending(),
+    registration: unstop('p/bgmi-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1774263'),
     ...online,
     teamSize: '4 players + 1 sub',
     duration: 'Last week of October',
@@ -665,6 +679,7 @@ export const EVENT_DETAILS = {
 
   codm: {
     ...pending(),
+    registration: unstop('p/codm-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773718'),
     ...online,
     teamSize: '5 players + 1 sub',
     duration: 'Last week of October',
@@ -709,6 +724,7 @@ export const EVENT_DETAILS = {
 
   'clash-royale': {
     ...pending(),
+    registration: unstop('p/clash-royale-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773719'),
     ...online,
     teamSize: 'Solo',
     duration: 'Last week of October',
@@ -744,7 +760,7 @@ export const EVENT_DETAILS = {
       'Organizers’ and referees’ decisions are final.',
     ],
     notes: [
-      'The registration link and deadlines will be shared closer to the event.',
+      'Registration is on Unstop; check the listing there for the deadline.',
       'Players must update to the latest Clash Royale version before the event.',
     ],
     organizers: arcadia,
@@ -779,4 +795,6 @@ export const FEST_DETAILS = {
   startDate: '2026-10-26',
   endDate: '2026-11-01',
   location: CAMPUS,
+  // The fest's Unstop page, which lists every event.
+  url: 'https://unstop.com/college-fests/cerebro-2026-27-indian-institute-of-information-technology-iiit-vadodara-525150',
 };

@@ -52,7 +52,7 @@ test('saved events persist and header opens the personal schedule', async ({
   ).toBeVisible();
 });
 
-test('direct event links show all operational fields and do not claim a registration', async ({
+test('direct event links show all operational fields and the official registration link', async ({
   page,
 }) => {
   await page.goto('/#event/robo-race');
@@ -75,11 +75,8 @@ test('direct event links show all operational fields and do not claim a registra
     dialog.getByRole('heading', { name: 'Technical specifications' }),
   ).toBeVisible();
   await expect(
-    dialog.getByRole('button', {
-      name: 'Registration opening soon',
-      exact: true,
-    }),
-  ).toBeDisabled();
+    dialog.getByRole('link', { name: /Register for Robo Race/ }),
+  ).toHaveAttribute('href', /^https:\/\/unstop\.com\//);
   await expect(
     dialog.getByRole('button', { name: 'Add to calendar' }),
   ).toBeVisible();

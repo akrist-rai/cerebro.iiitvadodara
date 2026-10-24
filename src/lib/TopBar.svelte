@@ -152,7 +152,7 @@
   }
   .desktop a:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     margin: 0 -6px;
     padding: 12px 6px;
   }
@@ -181,7 +181,7 @@
   .cmd:hover,
   .plan-link:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .register {
     height: 32px;
@@ -203,7 +203,7 @@
   }
   .register:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .menu-button {
     display: none;

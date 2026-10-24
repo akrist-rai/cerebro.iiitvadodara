@@ -344,7 +344,7 @@ export const TIERS = [
 export const FAQ = [
   {
     q: 'How do I register for an event?',
-    a: 'Open an event and press Register. Registration links are published by the organizing team closer to the date; once a link is live, the event briefing sends you to its official form. Until then you can save the event to your plan.',
+    a: 'Open an event and press Register. Registration runs on Unstop: once an event’s listing is live, its briefing sends you there. Events still waiting on a listing can be saved to your plan.',
   },
   {
     q: 'What is online and what is offline?',

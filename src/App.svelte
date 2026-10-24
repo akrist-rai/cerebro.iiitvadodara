@@ -198,7 +198,7 @@
     top: -100px;
     left: 16px;
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     padding: 12px 18px;
     font-weight: 800;
   }
@@ -211,8 +211,8 @@
     left: 50%;
     transform: translate(-50%, 20px);
     background: var(--ink);
-    color: var(--lime);
-    border: 2px solid var(--lime);
+    color: var(--gold);
+    border: 2px solid var(--gold);
     padding: 12px 18px;
     z-index: 100;
     font-size: 13px;

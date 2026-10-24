@@ -172,7 +172,7 @@
     role="presentation"
   >
     <div class="back" aria-hidden="true">
-      {#each BACK as id}<Art {id} tone="ink-lime" eager pos="50% 30%" />{/each}
+      {#each BACK as id}<Art {id} tone="ink-gold" eager pos="50% 30%" />{/each}
     </div>
     <pre class="art fieldpre" bind:this={pre} aria-hidden="true"></pre>
     <pre class="art wm" bind:this={wm} aria-hidden="true"></pre>
@@ -285,7 +285,7 @@
   .wm {
     position: absolute;
     color: var(--red);
-    --shade: var(--blue);
+    --shade: var(--crimson);
     pointer-events: none;
   }
   .grid {
@@ -329,7 +329,7 @@
   h2 em {
     font-style: normal;
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     padding: 0 0.12em;
   }
   .copy {
@@ -370,7 +370,7 @@
     width: 64px;
     height: 20px;
     transform: translateX(-50%) rotate(-3deg);
-    background: color-mix(in srgb, var(--lime) 82%, transparent);
+    background: color-mix(in srgb, var(--gold) 82%, transparent);
     border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
   }
   .print:hover {

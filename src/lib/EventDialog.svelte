@@ -5,6 +5,7 @@
   import AsciiScene from './AsciiScene.svelte';
   import Art from './Art.svelte';
   import { eventArt } from './art.js';
+  import { FEST_DETAILS } from './event-details.js';
   import {
     directory,
     registrationState,
@@ -168,18 +169,23 @@
       <div class="scene" aria-hidden="true">
         {#key event.id}
           {@const p = eventArt(event)}
-          <Art
-            id={p.id}
-            tone={p.tone}
-            pos={p.pos}
-            ratio="56 / 52"
-            dots={0.45}
-            ghost
-            eager
-          />
-          <div class="over">
-            <AsciiScene {event} cols={56} rows={27} animate />
-          </div>
+          {#if p.own}
+            <!-- the event's own poster, whole and in its own colours -->
+            <Art id={p.id} eager />
+          {:else}
+            <Art
+              id={p.id}
+              tone={p.tone}
+              pos={p.pos}
+              ratio="56 / 52"
+              dots={0.45}
+              ghost
+              eager
+            />
+            <div class="over">
+              <AsciiScene {event} cols={56} rows={27} animate />
+            </div>
+          {/if}
         {/key}
       </div>
     </div>
@@ -320,7 +326,6 @@
             All event times are shown in India Standard Time (IST).
           </p>
         </div>
-
       </aside>
     </div>
 
@@ -391,6 +396,15 @@
       Choose an event to see its registration status, team requirements, and
       entry details.
     </p>
+    <a
+      class="hub-fest"
+      href={FEST_DETAILS.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      >All events on Unstop<Icon name="diagonal" size={14} /><span class="sr">
+        (opens in a new tab)</span
+      ></a
+    >
     <ul class="registration-list">
       {#each directory as item}
         {@const registrationStatus = registrationState(item)}
@@ -425,8 +439,8 @@
   .event-dialog::backdrop {
     background: repeating-linear-gradient(
       135deg,
-      #14130fdd 0 6px,
-      #14130fee 6px 7px
+      #161619dd 0 6px,
+      #161619ee 6px 7px
     );
   }
   .dialog-top {
@@ -460,7 +474,7 @@
     gap: 8px;
     padding: 9px 12px;
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     border: 0;
     font-size: 11px;
     font-weight: 800;
@@ -480,12 +494,12 @@
     align-items: center;
     padding: 28px 0 22px;
   }
-  /* the event's poster, with its ASCII scene struck over it in lime */
+  /* the event's poster, with its ASCII scene struck over it in gold */
   .scene {
     position: relative;
     border: 2px solid var(--ink);
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     box-shadow: 7px 7px 0 var(--red);
   }
   .scene .over {
@@ -509,7 +523,7 @@
   h2 em {
     font-style: normal;
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
     padding: 0 0.1em;
   }
   h2:focus {
@@ -721,6 +735,19 @@
     color: var(--dim);
     max-width: 52ch;
   }
+  .hub-fest {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .hub-fest:hover {
+    color: var(--ink);
+  }
   .registration-list {
     margin-top: 24px;
     border-top: 2px solid var(--ink);
@@ -738,7 +765,7 @@
   }
   .registration-list button:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .registration-list .no {
     font-family: var(--pixel);

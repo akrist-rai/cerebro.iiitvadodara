@@ -252,7 +252,7 @@
   }
   .views button.active {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .day select {
     background: var(--paper-hi);
@@ -350,7 +350,7 @@
   }
   .event-title:hover {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .dots {
     flex: 1;
@@ -375,11 +375,11 @@
     padding: 0;
   }
   .save:hover {
-    background: var(--lime);
+    background: var(--gold);
   }
   .save.on {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   .sub {
     grid-column: 1;

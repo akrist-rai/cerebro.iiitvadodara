@@ -125,7 +125,7 @@
     box-shadow: 8px 8px 0 var(--ink);
   }
   .palette::backdrop {
-    background: #14130fcc;
+    background: #161619cc;
   }
   .prompt {
     display: flex;
@@ -168,7 +168,7 @@
   }
   button.on {
     background: var(--ink);
-    color: var(--lime);
+    color: var(--gold);
   }
   button.on .hint {
     color: var(--paper);

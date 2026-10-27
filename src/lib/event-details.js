@@ -150,6 +150,9 @@ export const EVENT_DETAILS = {
 
   equinox: {
     ...pending(),
+    registration: unstop(
+      'p/equinox-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773738',
+    ),
     mode: 'In person',
     teamSize: '2 members',
     duration: '2 hrs',

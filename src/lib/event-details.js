@@ -416,6 +416,9 @@ export const EVENT_DETAILS = {
 
   'trio-codejam': {
     ...pending(),
+    registration: unstop(
+      'p/trio-code-jam-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781453',
+    ),
     mode: 'In person',
     teamSize: '3 members',
     duration: '2 hrs',
@@ -466,6 +469,9 @@ export const EVENT_DETAILS = {
 
   codeclash: {
     ...pending(),
+    registration: unstop(
+      'hackathons/code-clash-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1775833',
+    ),
     ...online,
     teamSize: '3 members',
     duration: '3 hrs',

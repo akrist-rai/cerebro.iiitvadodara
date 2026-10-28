@@ -265,6 +265,20 @@
               The detailed rulebook will be published by the organizing team.
             </p>
           {/if}
+          {#each event.links as link}
+            {#if safeUrl(link.url)}
+              <a
+                class="link"
+                href={safeUrl(link.url)}
+                target="_blank"
+                rel="noopener noreferrer"
+                >{link.label}
+                <Icon name="diagonal" size={15} /><span class="sr">
+                  (opens in a new tab)</span
+                ></a
+              >
+            {/if}
+          {/each}
         </div>
 
         <div class="organizers">

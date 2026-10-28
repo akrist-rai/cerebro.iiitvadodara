@@ -25,6 +25,7 @@ const pending = () => ({
   rules: [],
   notes: [],
   rulesUrl: null,
+  links: [], // [{ label, url }] — other official pages, e.g. a partner sign-up
   registration: { status: 'upcoming', url: null, deadline: null },
 });
 
@@ -573,10 +574,26 @@ export const EVENT_DETAILS = {
           'Mind Snap: memorise a displayed pattern and reproduce it after it disappears.',
         ],
       },
+      {
+        title: 'Matiks Megaweek · online, 28 Oct – 4 Nov',
+        items: [
+          'An online league run by Enigma with Matiks. Join with league code 64IKXPAM.',
+          'Register with your official institute email ID only.',
+          'The cash prize pool grows with participation: ₹2,500 for up to 250 participants, ₹4,500 for 251–450 and ₹6,500 for 451 or more.',
+          'The top three share the pool in a 3:2:1 ratio.',
+          'Bonus: winners at the offline Matiks Mania on 1 Nov receive exclusive Matiks merchandise.',
+        ],
+      },
     ],
     notes: [
       'Rounds are played on the Matiks platform; points accumulate across rounds.',
       'Needs a separate classroom for the event.',
+    ],
+    links: [
+      {
+        label: 'Join Matiks Megaweek',
+        url: 'https://app.matiks.org/league-v2/6add9cbdfe61af49db3ab9c2/details?entry=direct&referrer=SK753095&referred_by=satish.on.matiks',
+      },
     ],
     organizers: enigma,
   },

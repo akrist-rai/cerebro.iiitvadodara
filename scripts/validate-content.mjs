@@ -47,6 +47,12 @@ for (const [id, event] of Object.entries(EVENT_DETAILS)) {
     'registration deadline cannot be after event start.',
   );
   check(!event.rulesUrl || safeUrl(event.rulesUrl), 'unsafe rulebook URL.');
+  check(Array.isArray(event.links), 'links must be an array.');
+  for (const link of event.links)
+    check(
+      typeof link.label === 'string' && link.label.trim() && safeUrl(link.url),
+      'each link needs a label and a safe URL.',
+    );
   check(Array.isArray(event.organizers), 'organizers must be an array.');
   check(
     Array.isArray(event.rules) && Array.isArray(event.details),

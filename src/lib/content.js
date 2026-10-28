@@ -187,6 +187,7 @@ export const EVENTS = [
     lede: '*Matiks Mania* is a fast-paced mathematical competition played live on the Matiks platform, where players go head to head across rounds that reward speed, accuracy and nerve.',
     more: [
       'Expect Sprint Duels (rapid-fire problems), Cross Maths (a crossword-style calculation puzzle) and Mind Snap (memorise a pattern, then reproduce it once it disappears). Points add up across rounds and the highest score wins.',
+      'Running alongside it is *Matiks Megaweek*, an online league from 28 Oct to 4 Nov with a cash prize pool that grows as more students join.',
     ],
   },
   {

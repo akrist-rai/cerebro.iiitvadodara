@@ -17,6 +17,7 @@ The content was filled from **CERBRO 2026-27 OFFICIAL PROPOSAL** (the master sch
 | `organizers`                                      | `{ name, role, email?, phone? }`. Only publish confirmed public contact details.                    |
 | `prizes`, `prizeTotal`                            | `{ title, amount, extra? }` rows; the total must equal the sum (validated). Omit it if it does not. |
 | `objective`, `details`, `rules`, `notes`          | Briefing copy: objective, titled bullet groups (phases, specs…), numbered rules, practical notes.   |
+| `links`                                           | `{ label, url }` rows for other official pages (e.g. a partner sign-up), shown under the rulebook.  |
 | `fee`                                             | INR number, `0` for free, or `null`.                                                                |
 | `teamSize`, `eligibility`, `capacity`, `duration` | Human-readable strings or `null`.                                                                   |
 | `registration.status`                             | `upcoming`, `open`, `full`, or `closed`; `registration.url` is the official HTTP(S) form.           |

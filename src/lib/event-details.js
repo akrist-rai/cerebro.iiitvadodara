@@ -313,10 +313,16 @@ export const EVENT_DETAILS = {
     ],
   },
 
+  // Sanction, formerly TechHunt. Its copy, deadline, location, eligibility and
+  // contacts come from its Unstop listing; times stay on the timetable.
   'tech-hunt': {
     ...pending(),
-    // Unstop's share link; the listing is not in its search index yet.
-    registration: unstop('o/6xNQLDz'),
+    registration: {
+      ...unstop(
+        'p/sanctiontechhunt-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781442',
+      ),
+      deadline: at('2026-10-30', '18:00'),
+    },
     mode: 'In person',
     teamSize: '3 members',
     duration: '6 hrs',
@@ -324,30 +330,28 @@ export const EVENT_DETAILS = {
     endsAt: at(D1, '18:00'),
     slots: ['d1'],
     venue: CAMPUS,
-    room: '9001 & 9101',
+    room: '9001 & 9101 (9th & 8th Block)',
     club: 'Technical Committee',
-    eligibility: 'Exclusively for engineering students.',
+    eligibility: 'All students of IIIT Vadodara.',
     objective:
-      'Encourage creative, innovative thinking through diverse technical challenges, problem-solving and brainstorming.',
+      'Descend through three depths of cybersecurity puzzles and capture the final flag.',
     details: [
       {
-        title: 'What to expect',
+        title: 'Challenges',
         items: [
-          'Coding conundrums and algorithmic riddles',
-          'Hardware troubleshooting',
-          'Brainstorming on emerging technologies',
-          'Clues hidden around the campus, leading to a final treasure',
+          'Cryptography: encrypted messages',
+          'Steganography: altered images',
+          'Spectrogram analysis: unheard signals',
+          'Logical challenges and scattered clues',
         ],
       },
     ],
-    rules: [
-      'A team of 3 people is allowed.',
-      'Internet and access to any AI is permissible.',
-    ],
-    notes: ['Needs access to the entire campus to hide and find the hints.'],
+    rules: ['Teams of exactly 3 members.'],
+    notes: ['Results are declared on 1 Nov at 12:00 PM.'],
     organizers: [
       person('Ankit Rai', 'Convenor', '20251504008', '8302638070'),
       person('Soham Agarwal', 'Co-convenor', '202452332', '9650036655'),
+      person('Jamil Ahmed Sayyed', null, '202451080', '7982881388'),
     ],
   },
 

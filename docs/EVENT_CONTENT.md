@@ -2,7 +2,7 @@
 
 Event copy lives in `src/lib/content.js`. Event operations live in `src/lib/event-details.js`, keyed by the same stable event IDs. Edit these files and rebuild; no backend or CMS is required.
 
-The content was filled from **CERBRO 2026-27 OFFICIAL PROPOSAL** (the master schedule and annexures A–P). Times and rooms come from **Event_TimeTable - Sheet1.pdf**, which supersedes the proposal's master schedule. Treasure of Code comes from **Treasure_of_Code_details.pdf**. Anything the sources do not state is `null` or an empty list and is shown as "To be announced". Never infer a value.
+The content was filled from **CERBRO 2026-27 OFFICIAL PROPOSAL** (the master schedule and annexures A–P). Times and rooms come from **Event_TimeTable - Sheet1.pdf**, which supersedes the proposal's master schedule. Treasure of Code comes from **Treasure_of_Code_details.pdf**. **Sanction (TechHunt)**, the renamed Tech Hunt, takes its copy, deadline, location, eligibility and contacts from its Unstop listing. Anything the sources do not state is `null` or an empty list and is shown as "To be announced". Never infer a value.
 
 ## Per-event fields (`event-details.js`)
 
@@ -32,7 +32,7 @@ The **event timetable** is treated as authoritative for times and rooms. Check t
 | --------------------- | ---------------------------------- | ----------------------------------- |
 | Inauguration          | 1 Nov, 10:30–12:00, 9001           | Proposal: 31 Oct, 09:00–10:00       |
 | Equinox               | 31 Oct, 09:00–11:00, 9101          | 31 Oct 10:00–12:00; annexure 30 Oct |
-| Tech Hunt             | 31 Oct, 12:00–18:00                | 30 Oct, 2:00–7:00 PM                |
+| Sanction (TechHunt)   | 31 Oct, 12:00–18:00                | 30 Oct, 2:00–7:00 PM                |
 | D2D                   | 31 Oct, 11:00–12:00                | 31 Oct 13:00–14:00; annexure 30 Oct |
 | Robo Race             | 31 Oct, 16:00–18:00                | 30 Oct, 04:00–06:00                 |
 | Robo Soccer           | 1 Nov, 15:00–18:00                 | 31 Oct                              |

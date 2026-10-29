@@ -207,11 +207,11 @@ test('event stamps open briefings and the sticky registration shortcut works', a
 }) => {
   await page.goto('/');
   await page
-    .getByRole('button', { name: 'View Tech-Hunt', exact: true })
+    .getByRole('button', { name: 'View Clue to Canvas', exact: true })
     .click();
   const dialog = page.getByRole('dialog');
   await expect(
-    dialog.getByRole('heading', { name: 'Tech-Hunt', exact: true }),
+    dialog.getByRole('heading', { name: 'Clue to Canvas', exact: true }),
   ).toBeVisible();
   await dialog
     .getByRole('button', { name: 'Registration', exact: true })

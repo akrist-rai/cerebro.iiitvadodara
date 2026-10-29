@@ -51,7 +51,7 @@ The timetable itself is ambiguous in a few places:
 - **Trio-Codejam**'s room reads `9012A/B`; there is no 9012, and Day 1 books 9102A/B until 4 PM, so it is shown as 9102 A/B.
 - **E-Cell's Shark Tank** (1 Nov, 10:00–13:00, Conference Room), the **Photo Booth** and the **Graffiti Wall** are on the timetable but have no event copy yet, so they are not on the site.
 
-The Treasure of Code brief also contradicts itself on Round 2 (participants' own laptops vs "the lab systems provided"; "internet-based platform" vs "no internet"). Those points are left off the site.
+The Treasure of Code brief also contradicts itself on Round 2 (participants' own laptops vs "the lab systems provided"; "internet-based platform" vs "no internet"). Its Unstop listing settles both: participants bring their own laptops, and internet access is prohibited in Round 2.
 
 Other things to verify: the Robo Soccer annexure repeats Aditya Vikram's number for Ojas Naringe (Robo Race's number is used); Tanishq Singhal has two different contacts across annexures, so none is published; two organizer emails are malformed in the PDF and were left out.
 
@@ -59,7 +59,7 @@ Sponsor tier amounts are not published: the deck gives bare numbers with no unit
 
 ## Unstop listings
 
-Every registration link points at the event's Cerebro 2026-27 listing on Unstop, and the site was last checked against those listings on 29 Oct 2026. Where a listing states something, the site follows it: registration deadlines, team sizes, eligibility, rules, the gaming leagues' dates (27–30 Oct) and D2D's rounds (online design submissions, then an offline presentation on 1 Nov, 11:00–13:00). Most listings are private, so only Code Clash, Prudentia and the gaming leagues appear on the fest page. Clue to Canvas, Treasure of Code and Arcade Corner have no listing yet.
+Every registration link points at the event's Cerebro 2026-27 listing on Unstop, and the site was last checked against those listings on 29 Oct 2026. Where a listing states something, the site follows it: registration deadlines, team sizes, eligibility, rules, the gaming leagues' dates (27–30 Oct) and D2D's rounds (online design submissions, then an offline presentation on 1 Nov, 11:00–13:00). Most listings are private, so only Code Clash, Prudentia and the gaming leagues appear on the fest page. Clue to Canvas and Arcade Corner have no listing yet.
 
 Check these with the organizers:
 

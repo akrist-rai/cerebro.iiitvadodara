@@ -884,6 +884,9 @@ export const EVENT_DETAILS = {
 
   'treasure-of-code': {
     ...pending(),
+    registration: unstop(
+      'p/treasure-of-code-indian-institute-of-information-technology-vadodara-1775907',
+    ),
     mode: 'In person',
     teamSize: 'Solo',
     duration: '2 hrs',
@@ -934,10 +937,10 @@ export const EVENT_DETAILS = {
       },
     ],
     rules: [
-      'Carry a valid institute ID card and report by 12:00 PM sharp.',
+      'Carry a valid institute ID card and your own laptop, and report by 12:00 PM sharp.',
       'The quiz is strictly time-bound; answers submitted after the 10 minutes are not considered.',
       'Only participants announced as qualified after Round 1 take part in Round 2; quiz ties are broken by submission time.',
-      'Mobile phones, smartwatches and any external storage are prohibited in Round 2.',
+      'Mobile phones, smartwatches, internet access and any external storage are prohibited in Round 2.',
       'Pre-written code, notes and printed material may not be used.',
       'Every key must come from actually solving the problem; sharing or guessing keys earns only 10% of the points.',
       'Programs must run on the coding platform, and a coordinator may ask you to demonstrate your solution.',

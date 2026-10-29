@@ -315,6 +315,8 @@ export const EVENT_DETAILS = {
 
   'tech-hunt': {
     ...pending(),
+    // Unstop's share link; the listing is not in its search index yet.
+    registration: unstop('o/6xNQLDz'),
     mode: 'In person',
     teamSize: '3 members',
     duration: '6 hrs',

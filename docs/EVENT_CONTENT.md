@@ -42,6 +42,8 @@ The **event timetable** is treated as authoritative for times and rooms. Check t
 | CodeClash prize total | ₹9,750                             | Rows sum to ₹8,550; total omitted   |
 | Robo Race format      | Deck: knockout                     | Proposal: one timed run each        |
 
+The organizers have since corrected two of these, and the site follows them: **CodeClash** runs on 30 Oct, 21:00–00:00, in the online window, and **Trio-Codejam** runs 11:00–13:00 on 31 Oct.
+
 The timetable itself is ambiguous in a few places:
 
 - The **Director Addressing** row sits under Day 2, but its programme box sits beside Day 1 and only Day 1's room list books 9001 before noon. Shown on Day 2.

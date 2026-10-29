@@ -187,6 +187,9 @@ export const EVENT_DETAILS = {
 
   'retro-market': {
     ...pending(),
+    registration: unstop(
+      'p/retro-market-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1780975',
+    ),
     mode: 'In person',
     teamSize: 'Solo',
     duration: '2 hrs',
@@ -201,7 +204,7 @@ export const EVENT_DETAILS = {
     objective:
       'Revive the loud, fast-paced floor trading of open outcry markets and give first-years a feel for trading instinct under pressure.',
     rules: [
-      'Individual event for first-year IIIT Vadodara (Gandhinagar) students; no prior registration needed.',
+      'Individual event for first-year IIIT Vadodara (Gandhinagar) students.',
       'Trades must be written on official slips; verbal trades count only if documented.',
       'The slip-writing format is explained beforehand, and only valid slips are accepted.',
       'All trades must happen within the set time; late slips do not count.',
@@ -428,8 +431,8 @@ export const EVENT_DETAILS = {
     mode: 'In person',
     teamSize: '3 members',
     duration: '2 hrs',
-    startsAt: at(D1, '14:00'),
-    endsAt: at(D1, '16:00'),
+    startsAt: at(D1, '11:00'),
+    endsAt: at(D1, '13:00'),
     slots: ['d1'],
     venue: CAMPUS,
     room: '9102 A/B',
@@ -481,9 +484,9 @@ export const EVENT_DETAILS = {
     ...online,
     teamSize: '3 members',
     duration: '3 hrs',
-    startsAt: at(D1, '21:00'),
-    endsAt: at('2026-11-01', '00:00'),
-    slots: ['d1'],
+    startsAt: at('2026-10-30', '21:00'),
+    endsAt: at(D1, '00:00'),
+    slots: ['online'],
     venue: 'Online · Codeforces',
     club: 'Coding Club',
     eligibility:

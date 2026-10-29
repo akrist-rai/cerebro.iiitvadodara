@@ -69,8 +69,10 @@ test('direct event links show all operational fields and the official registrati
     'The people behind it',
   ])
     await expect(dialog.getByText(text, { exact: true })).toBeVisible();
-  // Confirmed data from the proposal is on the page.
-  await expect(dialog.getByText('Courtyard', { exact: true })).toBeVisible();
+  // Confirmed data from the proposal and the Unstop listing is on the page.
+  await expect(
+    dialog.getByText('Courtyard, 9th Block', { exact: true }),
+  ).toBeVisible();
   await expect(
     dialog.getByRole('heading', { name: 'Technical specifications' }),
   ).toBeVisible();

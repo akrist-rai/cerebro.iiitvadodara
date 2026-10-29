@@ -29,11 +29,12 @@ const pending = () => ({
   registration: { status: 'upcoming', url: null, deadline: null },
 });
 
-// An open registration on the event's Unstop listing.
-const unstop = (path) => ({
+// An open registration on the event's Unstop listing. The deadline is the
+// listing's own registration end, so the site closes when Unstop does.
+const unstop = (path, deadline = null) => ({
   status: 'open',
   url: `https://unstop.com/${path}`,
-  deadline: null,
+  deadline,
 });
 
 const person = (name, role, email, phone) => ({
@@ -121,6 +122,12 @@ const gamingNotes = [
   'Registration is on Unstop; check the listing there for the deadline.',
   'Referees and observers are present in all matches to ensure fair play.',
 ];
+// From the 9-Bit Unstop listings; they apply to both robotics events.
+const roboticsRules = [
+  'Every member registers with their official college email; other email accounts are not considered.',
+  'All registered participants must attend the event and any associated workshops; not showing up without notice may lead to disciplinary action.',
+  'Instructions and updates go out in the official WhatsApp group, shared with shortlisted teams; not following them may lead to disqualification.',
+];
 const online = { mode: 'Online', venue: 'Online' };
 
 export const EVENT_DETAILS = {
@@ -153,6 +160,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/equinox-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773738',
+      at('2026-10-30', '18:29'),
     ),
     mode: 'In person',
     teamSize: '2 members',
@@ -189,6 +197,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/retro-market-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1780975',
+      at(D1, '04:00'),
     ),
     mode: 'In person',
     teamSize: 'Solo',
@@ -203,12 +212,24 @@ export const EVENT_DETAILS = {
       'Exclusively for first-year undergraduates of IIIT Vadodara, Gandhinagar campus.',
     objective:
       'Revive the loud, fast-paced floor trading of open outcry markets and give first-years a feel for trading instinct under pressure.',
+    details: [
+      {
+        title: 'How it works',
+        items: [
+          'Each participant starts with ₹10,00,000 in virtual money.',
+          'Fictitious companies are listed on the board, and their prices move throughout the event.',
+          'Brokers on the floor handle every trade, written on a paper slip and on your own record sheet.',
+        ],
+      },
+    ],
     rules: [
       'Individual event for first-year IIIT Vadodara (Gandhinagar) students.',
       'Trades must be written on official slips; verbal trades count only if documented.',
       'The slip-writing format is explained beforehand, and only valid slips are accepted.',
+      'To trade, tell the broker the company and the quantity; shares trade only in bundles of 10.',
+      'Short selling is not allowed: you may only sell shares you own.',
       'All trades must happen within the set time; late slips do not count.',
-      'Final value includes booked trades and stock holdings at final prices.',
+      'Final value includes booked trades and stock holdings at final prices; the highest profit wins.',
       'All slips must be submitted for evaluation.',
     ],
     notes: ['Needs a separate area to run the trading ring.'],
@@ -270,13 +291,13 @@ export const EVENT_DETAILS = {
       'p/robo-race-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773606',
     ),
     mode: 'In person',
-    teamSize: 'Up to 4 members',
+    teamSize: '4 members',
     duration: '2 hrs',
     startsAt: at(D1, '16:00'),
     endsAt: at(D1, '18:00'),
     slots: ['d1'],
     venue: CAMPUS,
-    room: 'Courtyard',
+    room: 'Courtyard, 9th Block',
     club: '9-Bit · The Robotics Club',
     capacity: '10 teams',
     eligibility:
@@ -301,7 +322,8 @@ export const EVENT_DETAILS = {
       },
     ],
     rules: [
-      'Each team has at most four participants.',
+      'Each team has exactly 4 members, including at least 1 female member.',
+      ...roboticsRules,
       'Teams build their own robot to the prescribed technical specifications.',
       'Report to the venue at least 30 minutes before the event starts.',
       'Each team gets one official attempt unless the organizers say otherwise.',
@@ -310,7 +332,7 @@ export const EVENT_DETAILS = {
     ],
     notes: ['Mentorship sessions will be conducted before the event.'],
     organizers: [
-      person('Aditya Vikram', 'Convenor', '20251501190', '8210110012'),
+      person('Aditya Vikram', 'Convenor', '20251504005', '8210110012'),
       person('Ojas Naringe', 'Co-convenor', '20251503034', '9405819180'),
       person('Tanishq Singhal', 'Club Secretary, 9-Bit'),
     ],
@@ -320,12 +342,10 @@ export const EVENT_DETAILS = {
   // contacts come from its Unstop listing; times stay on the timetable.
   'tech-hunt': {
     ...pending(),
-    registration: {
-      ...unstop(
-        'p/sanctiontechhunt-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781442',
-      ),
-      deadline: at('2026-10-30', '18:00'),
-    },
+    registration: unstop(
+      'p/sanctiontechhunt-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781442',
+      at('2026-10-30', '18:00'),
+    ),
     mode: 'In person',
     teamSize: '3 members',
     duration: '6 hrs',
@@ -362,6 +382,8 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/robo-soccer-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773648',
+      // Unstop's own window; it closed on 23 Oct after 75 minutes.
+      at('2026-10-23', '20:15'),
     ),
     mode: 'In person',
     teamSize: '4 members',
@@ -370,7 +392,7 @@ export const EVENT_DETAILS = {
     endsAt: at(D2, '18:00'),
     slots: ['d2'],
     venue: CAMPUS,
-    room: 'Courtyard',
+    room: 'Courtyard, 9th Block',
     club: '9-Bit · The Robotics Club',
     capacity: '15 teams',
     eligibility:
@@ -389,7 +411,7 @@ export const EVENT_DETAILS = {
       {
         title: 'Format',
         items: [
-          'Teams of 4 members; female participation is encouraged.',
+          'Teams of exactly 4 members, including at least 1 female member.',
           'Robots may be manually controlled or semi-autonomous.',
           'Teams may use 1 or 2 robots per match, as per event guidelines.',
         ],
@@ -411,6 +433,7 @@ export const EVENT_DETAILS = {
       'No direct human interference with the ball during matches.',
       'Referee decisions are final and binding.',
       'Limited time-outs and repairs are allowed between halves.',
+      ...roboticsRules,
     ],
     notes: [
       'Teams submit a technical sheet describing the components and mechanisms used.',
@@ -418,7 +441,7 @@ export const EVENT_DETAILS = {
     ],
     organizers: [
       person('Ojas Naringe', 'Convenor', '20251503034', '9405819180'),
-      person('Aditya Vikram', 'Co-convenor', '20251501190', '8210110012'),
+      person('Aditya Vikram', 'Co-convenor', '20251504005', '8210110012'),
       person('Tanishq Singhal', 'Club Secretary, 9-Bit'),
     ],
   },
@@ -427,6 +450,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/trio-code-jam-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781453',
+      at('2026-10-30', '23:59'),
     ),
     mode: 'In person',
     teamSize: '3 members',
@@ -438,16 +462,17 @@ export const EVENT_DETAILS = {
     room: '9102 A/B',
     club: 'Coding Club',
     eligibility:
-      'Currently enrolled students; all members of a team must be from the same college.',
+      'Only IIIT Vadodara students; teammates can be from different specializations.',
     objective:
       'Test individual coding skill while building seamless teamwork between members who must build on each other’s work without direct interaction.',
     details: [
       {
         title: 'How it runs',
         items: [
-          'Each member gets a 25-minute window to tackle a series of coding puzzles.',
+          'Each member gets a fixed time limit to work on a coding problem.',
+          'When time is up, the next member takes over the existing code and continues from where the last one left off.',
+          'The number of problems, individual time limits and total duration are announced by the organizers.',
           'No direct communication between teammates.',
-          'As one member finishes, the next builds on the foundation left behind.',
           'ACM-style ranking.',
         ],
       },
@@ -460,14 +485,13 @@ export const EVENT_DETAILS = {
       },
     ],
     rules: [
-      'A team has 3 members, with at least one first-year teammate.',
-      'The team brings one laptop that is common to every teammate.',
-      'Code templates are allowed.',
-      'A teammate who has finished their slot must not interact with those yet to code.',
-      'Typing must stop immediately when a time slot ends, or the teammate is dismissed.',
-      'Comments and mnemonic variable names are allowed.',
-      'Plagiarism or any attempt to cheat leads to immediate disqualification.',
-      'In case of any discrepancy the organizers’ decision is final.',
+      'Each team has exactly 3 members.',
+      'AI tools and AI-powered coding assistants are strictly prohibited.',
+      'Members code only during their allotted turns and hand over their progress when time expires.',
+      'External assistance and plagiarism are strictly prohibited.',
+      'Code templates, comments and mnemonic variable names are allowed.',
+      'Any violation of the rules may lead to disqualification.',
+      'The organizers’ decisions are final.',
     ],
     organizers: [
       person('Darshan Patel', 'Convenor', null, '9427117467'),
@@ -480,6 +504,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'hackathons/code-clash-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1775833',
+      at('2026-10-30', '00:01'),
     ),
     ...online,
     teamSize: '3 members',
@@ -503,10 +528,15 @@ export const EVENT_DETAILS = {
       },
     ],
     rules: [
-      'Any plagiarism leads to immediate disqualification.',
-      'A team must contain 3 members.',
-      'Team members should be from the same institute.',
-      'In case of discrepancy, the organizers’ decision is final.',
+      'A team must contain 3 members, all from the same institute.',
+      'No AI assistance: AI tools may not be used to generate, debug or optimise code.',
+      'Allowed languages: C++, Java and Python.',
+      'Teams develop their solutions independently; collaboration between teams during the contest is prohibited.',
+      'Copying code or submitting another team’s solutions is strictly prohibited and may lead to disqualification.',
+      'All solutions are submitted through the official contest platform within its time and memory limits.',
+      'Multiple attempts per problem are allowed, subject to the platform’s rules.',
+      'Exploiting the judging system, gaining unauthorised access or any other unfair practice is prohibited.',
+      'The organizers may disqualify teams that break the rules; their decisions on violations and disputes are final.',
     ],
     organizers: [
       person('Arpit Maheshwari', 'Convenor', '202451022', '9024236239'),
@@ -517,19 +547,23 @@ export const EVENT_DETAILS = {
 
   d2d: {
     ...pending(),
+    // Online design rounds, then the offline presentation, which is the slot
+    // shown here; both come from the Unstop listing's rounds.
     registration: unstop(
-      'p/design-to-developd2d-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773721',
+      'competitions/design-to-develop-d2d-indian-institute-of-information-technology-vadodara-1773721',
+      at('2026-10-29', '23:59'),
     ),
-    mode: 'In person',
+    mode: 'Hybrid',
     teamSize: '3 members',
-    duration: '1 hr',
-    startsAt: at(D1, '11:00'),
-    endsAt: at(D1, '12:00'),
-    slots: ['d1'],
+    duration: '27 Oct – 1 Nov',
+    startsAt: at(D2, '11:00'),
+    endsAt: at(D2, '13:00'),
+    slots: ['d2'],
     venue: CAMPUS,
     room: '9111',
     club: 'DOT · The Design Club × Coding Club',
-    eligibility: 'All undergraduate B.Tech students of IIIT Vadodara.',
+    eligibility:
+      'Undergraduate B.Tech students of any accredited institution; all three members must be from the same institute.',
     objective:
       'Provide a platform to demonstrate skill across the whole design and development lifecycle, from concept to a functional front-end prototype.',
     details: [
@@ -542,6 +576,13 @@ export const EVENT_DETAILS = {
         ],
       },
       {
+        title: 'Timeline',
+        items: [
+          'Online: submit the Figma design and a design prototyping video between 29 Oct, 12:00 PM and 31 Oct, 11:59 PM.',
+          'Offline: present the project on 1 Nov, 11:00 AM – 1:00 PM, in 9111.',
+        ],
+      },
+      {
         title: 'Format',
         items: [
           'Figma is mandatory for prototyping; any technology may be used for the front-end.',
@@ -551,14 +592,12 @@ export const EVENT_DETAILS = {
     ],
     rules: [
       'A team has exactly 3 members, no more and no fewer.',
+      'Every team must submit proof of bonafide status from its institute, or the whole team is eliminated.',
       'Plagiarism leads to direct elimination.',
-      'Projects and presentations must be submitted on time.',
+      'Projects and presentations must be submitted within the deadlines; missing one means elimination.',
       'Harassment, abuse or profanity in a submission is disqualified immediately.',
       'Every team must make a login page and a landing page, plus at least two more pages for the chosen problem statement.',
       'All decisions of the judges and organizers are final.',
-    ],
-    notes: [
-      'Registration details with deadlines will be shared closer to the event date.',
     ],
     organizers: [...dot, ...coding],
   },
@@ -567,6 +606,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/matiks-mania-indian-institute-of-information-technology-vadodara-1773752',
+      at('2026-10-30', '18:29'),
     ),
     mode: 'In person',
     teamSize: 'Solo',
@@ -656,11 +696,12 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/valorant-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773621',
+      at('2026-10-27', '17:30'),
     ),
     ...online,
     teamSize: '5 players + up to 2 subs',
-    duration: 'Last week of October',
-    dateText: 'Both days · 31 Oct & 1 Nov',
+    duration: '4 days',
+    dateText: '27 – 30 Oct 2026',
     timeText: 'Match slots to be announced',
     slots: ['leagues'],
     club: 'Arcadia Gaming Club',
@@ -696,13 +737,16 @@ export const EVENT_DETAILS = {
 
   bgmi: {
     ...pending(),
+    // 1774263 is a duplicate listing that was open for 23 seconds; the fest
+    // page links this one.
     registration: unstop(
-      'p/bgmi-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1774263',
+      'events/bgmi-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1774269',
+      at('2026-10-28', '12:00'),
     ),
     ...online,
     teamSize: '4 players + 1 sub',
-    duration: 'Last week of October',
-    dateText: 'Both days · 31 Oct & 1 Nov',
+    duration: '4 days',
+    dateText: '27 – 30 Oct 2026',
     timeText: 'Match slots to be announced',
     slots: ['leagues'],
     club: 'Arcadia Gaming Club',
@@ -744,11 +788,12 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/codm-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773718',
+      at('2026-10-28', '12:00'),
     ),
     ...online,
     teamSize: '5 players + 1 sub',
-    duration: 'Last week of October',
-    dateText: 'Both days · 31 Oct & 1 Nov',
+    duration: '4 days',
+    dateText: '27 – 30 Oct 2026',
     timeText: 'Match slots to be announced',
     slots: ['leagues'],
     club: 'Arcadia Gaming Club',
@@ -776,6 +821,7 @@ export const EVENT_DETAILS = {
     ],
     rules: [
       'Every team must have exactly 5 players, and optionally 1 substitute.',
+      'Tablets, iPads and emulators are banned.',
       'Any use of cheats, hacks or third-party tools means immediate disqualification.',
       'Players must ensure stable internet connectivity during matches.',
       ...gamingRules,
@@ -791,24 +837,25 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/clash-royale-league-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1773719',
+      at('2026-10-28', '12:00'),
     ),
     ...online,
     teamSize: 'Solo',
-    duration: 'Last week of October',
-    dateText: 'Both days · 31 Oct & 1 Nov',
+    duration: '4 days',
+    dateText: '27 – 30 Oct 2026',
     timeText: 'Match slots to be announced',
     slots: ['leagues'],
     club: 'Arcadia Gaming Club',
-    eligibility: 'Undergraduate students of IIIT Vadodara.',
+    eligibility: 'Strictly students currently enrolled at IIIT Vadodara.',
     objective:
       'A fast-paced, strategic 1v1 mobile event that tests individual decision-making, deck-building and real-time tactics.',
     details: [
       {
         title: 'Format',
         items: [
-          '1v1 friendly battles.',
-          'Single-elimination knockout leading to semi-finals and finals.',
-          'Early rounds best-of-3; semi-finals and finals best-of-5.',
+          '1v1 Friendly Battles at Tournament Standard.',
+          'Knockout stages leading to semi-finals and finals.',
+          'Early rounds best-of-1; semi-finals and finals best-of-3.',
         ],
       },
       {
@@ -821,13 +868,15 @@ export const EVENT_DETAILS = {
     ],
     rules: [
       'An individual competition; every match is strictly 1v1.',
-      'Participants must submit valid proof of enrollment; failure to do so leads to elimination.',
-      'Third-party tools, account sharing or exploiting bugs mean immediate disqualification.',
-      'Players must ensure stable internet; disconnects do not warrant a rematch unless the referee agrees.',
+      'Matches use the in-game Friendly Battle feature, which balances card levels to Tournament Standard.',
+      'Any use of cheats, hacks or third-party tools means immediate disqualification.',
+      'Players must ensure stable internet; disconnects do not warrant a rematch.',
+      'Sportsmanship is expected: abusive chat, harassment (including excessive or toxic emote spamming) or misconduct leads to disqualification.',
       'Organizers’ and referees’ decisions are final.',
     ],
     notes: [
       'Registration is on Unstop; check the listing there for the deadline.',
+      'Referees and observers are invited to the clan to spectate matches.',
       'Players must update to the latest Clash Royale version before the event.',
     ],
     organizers: arcadia,

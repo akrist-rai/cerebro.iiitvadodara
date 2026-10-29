@@ -35,7 +35,7 @@ export const SLOTS = [
   {
     id: 'leagues',
     label: 'Arcadia leagues',
-    range: '31 Oct & 1 Nov',
+    range: '27 – 30 Oct',
     note: 'Online · slots to be announced',
   },
 ];

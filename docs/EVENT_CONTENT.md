@@ -38,7 +38,7 @@ The **event timetable** is treated as authoritative for times and rooms. Check t
 | Robo Soccer           | 1 Nov, 15:00–18:00                 | 31 Oct                              |
 | Trio-Codejam          | 31 Oct, 14:00–16:00, 9102 A/B      | 1 Nov 11:00–13:00; annexure 31 Oct  |
 | CodeClash end time    | `12:00 PM` after a `9:00 PM` start | 3 hours, so shown as 00:00          |
-| Gaming leagues        | "Both days", no times              | "Last week of October", online      |
+| Gaming leagues        | "Both days", no times              | Unstop: 27–30 Oct, online (shown)   |
 | CodeClash prize total | ₹9,750                             | Rows sum to ₹8,550; total omitted   |
 | Robo Race format      | Deck: knockout                     | Proposal: one timed run each        |
 
@@ -56,6 +56,18 @@ The Treasure of Code brief also contradicts itself on Round 2 (participants' own
 Other things to verify: the Robo Soccer annexure repeats Aditya Vikram's number for Ojas Naringe (Robo Race's number is used); Tanishq Singhal has two different contacts across annexures, so none is published; two organizer emails are malformed in the PDF and were left out.
 
 Sponsor tier amounts are not published: the deck gives bare numbers with no unit, and Annexure I (the brochure) is not in the proposal.
+
+## Unstop listings
+
+Every registration link points at the event's Cerebro 2026-27 listing on Unstop, and the site was last checked against those listings on 29 Oct 2026. Where a listing states something, the site follows it: registration deadlines, team sizes, eligibility, rules, the gaming leagues' dates (27–30 Oct) and D2D's rounds (online design submissions, then an offline presentation on 1 Nov, 11:00–13:00). Most listings are private, so only Code Clash, Prudentia and the gaming leagues appear on the fest page. Clue to Canvas, Treasure of Code and Arcade Corner have no listing yet.
+
+Check these with the organizers:
+
+- **Robo Soccer**'s registration window on Unstop was 23 Oct, 19:00–20:15, and is now closed, so the site shows registration closed.
+- **Retro Market**'s registration closes on Unstop at 04:00 on 31 Oct.
+- **D2D**'s presentation (1 Nov, 11:00–13:00, 9111) overlaps **Clue to Canvas** (1 Nov, 12:00–13:00, 9111).
+- **Trio-Codejam** (31 Oct, 11:00–13:00, 9102 A/B) overlaps **Treasure of Code** (31 Oct, 12:00–14:00, 9102 A/B).
+- Unstop gives **Aditya Vikram**'s email as 20251504005, not the proposal's 20251501190; the site uses Unstop's.
 
 ## Registration
 

@@ -105,7 +105,7 @@ export const EVENTS = [
     kind: 'event',
     name: 'Robo Race',
     track: 'Robotics',
-    meta: ['Teams of up to 4', 'Timed track run'],
+    meta: ['Teams of 4', 'Timed track run'],
     lede: '*Navigate. Control. Conquer.* Teams build a robotic vehicle and send it around a challenging track of turns, obstacles and slopes against the clock.',
     more: [
       'Each team gets an official attempt on the course, and the fastest completion time, after any penalties, wins. It rewards speed, stability, control and manoeuvrability.',
@@ -146,8 +146,8 @@ export const EVENTS = [
     kind: 'event',
     name: 'Trio-Codejam',
     track: 'Code',
-    meta: ['Teams of 3', '25 minutes each'],
-    lede: 'Trio-Codejam brings together three minds and one baton. Each teammate gets a *25-minute window* to crack a run of coding puzzles, building on whatever the last teammate left behind, with no talking allowed.',
+    meta: ['Teams of 3', 'Relay coding'],
+    lede: 'Trio-Codejam brings together three minds and one baton. Each teammate gets a *fixed time window* to crack a run of coding puzzles, building on whatever the last teammate left behind, with no talking allowed.',
     more: [
       'Hosted in person at IIIT Vadodara - Gandhinagar Campus on an ACM-style ranking. It tests individual coding skill and, just as much, how well a team can collaborate in silence.',
     ],
@@ -248,7 +248,7 @@ export const EVENTS = [
     meta: ['1v1', 'Online knockout'],
     lede: 'The *Cerebro Clash Royale League* is a head-to-head, online 1v1 tournament testing deck-building, decision-making and real-time tactics.',
     more: [
-      'A single-elimination knockout: early rounds are best-of-3, semi-finals and finals best-of-5. Open to IIIT Vadodara undergraduates.',
+      'A knockout played as Friendly Battles at Tournament Standard: early rounds are best-of-1, semi-finals and finals best-of-3. Open only to students currently enrolled at IIIT Vadodara.',
     ],
   },
   {

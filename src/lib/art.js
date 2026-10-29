@@ -78,10 +78,11 @@ export const TRACK_ART = {
 // title in frame; a tone pulls an off-palette poster into the site's inks
 // (the event briefing always shows the poster whole, in its own colours).
 export const POSTER_ART = {
+  equinox: ['ink-gold', '50% 8%'],
   'tech-hunt': ['', '50% 48%'],
   'robo-race': ['', '50% 92%'],
   'robo-soccer': ['', '50% 100%'],
-  'matiks-mania': ['ink-gold', '50% 26%'],
+  'matiks-mania': ['ink-gold', '50% 0%'],
   'retro-market': ['', '50% 24%'],
 };
 

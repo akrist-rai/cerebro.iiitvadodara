@@ -344,7 +344,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/sanctiontechhunt-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781442',
-      at('2026-10-30', '18:00'),
+      at('2026-10-30', '24:00'),
     ),
     mode: 'In person',
     teamSize: '3 members',

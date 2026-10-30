@@ -344,7 +344,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/sanctiontechhunt-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781442',
-      at('2026-10-30', '23:55:00'),
+      at('2026-10-31', '6:55:00'),
     ),
     mode: 'In person',
     teamSize: '3 members',
@@ -450,7 +450,7 @@ export const EVENT_DETAILS = {
     ...pending(),
     registration: unstop(
       'p/trio-code-jam-cerebro-2026-27-indian-institute-of-information-technology-vadodara-1781453',
-      at('2026-10-30', '23:59'),
+      at('2026-10-31', '12:55:00'),
     ),
     mode: 'In person',
     teamSize: '3 members',
